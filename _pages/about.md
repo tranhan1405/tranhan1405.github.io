@@ -27,7 +27,7 @@ redirect_from:
 - **2010–2015**: Bachelor of Engineering, Civil Engineering  
   [Hanoi Architectural University](https://hau.edu.vn/?lang=en), Hanoi, Vietnam
 
-  ### Research Experience
+### Research Experience
   
 - **2023–present**: Develop a novel SG thermal break (Cooperation between Sejong University and SG company, South Korea)
   - Investigated the acoustic performance of a novel thermal break using Ultra-High-Performance Concrete (UHPC) cores.
