@@ -17,7 +17,14 @@ redirect_from:
 - Concrete Structures
 
 ### Education
-- **Postdoctoral Researcher, Architectural Engineering** | [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea | 2023–present
-- **PhD Candidate, Architectural Engineering** | [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea | 2019–2023
-- **Bachelor of Engineering, Civil Engineering** | [Hanoi Architectural University](https://hau.edu.vn/?lang=en), Hanoi, Vietnam | 2010–2015
+
+- **2023–present**: Postdoctoral Researcher, Architectural Engineering  
+  [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea
+
+- **2019–2023**: PhD Candidate, Architectural Engineering  
+  [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea
+
+- **2010–2015**: Bachelor of Engineering, Civil Engineering  
+  [Hanoi Architectural University](https://hau.edu.vn/?lang=en), Hanoi, Vietnam
+
 
