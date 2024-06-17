@@ -29,7 +29,7 @@ redirect_from:
 
 ### Research Experience
 
-- **2023–present**: Developed a novel SG thermal break in collaboration with SG company, investigating the acoustic performance using Ultra-High-Performance Concrete (UHPC) cores.
+- **2023–present**: Developed a novel SG thermal break using Ultra-High-Performance Concrete (UHPC) cores in collaboration with SG company.
 - **2023–2024**: Developed a floating floor system with rubber cushions to reduce heavy weight impact sound for apartments, in partnership with Korea Disaster Prevention Technology Company Ltd.
-- **2022–present**: Developed a modular connector for high-rise buildings, in collaboration with Samsung C&T.
+- **2022–present**: Developed a modular steel connector for modular steel high-rise buildings, in collaboration with Samsung C&T.
 - **2020–2022**: Developed a vibration attenuation system for raceway lighting, integrating a pulley friction damper to enhance earthquake survivability, in partnership with Sehong Inc, Ltd.
