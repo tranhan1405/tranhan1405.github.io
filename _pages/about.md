@@ -27,4 +27,18 @@ redirect_from:
 - **2010–2015**: Bachelor of Engineering, Civil Engineering  
   [Hanoi Architectural University](https://hau.edu.vn/?lang=en), Hanoi, Vietnam
 
+  ### Research Experience
+
+#### Deep Learning Architecture Research Center, Department of Architectural Engineering, Sejong University, Seoul, South Korea
+- **2023–present**: Develop a novel SG thermal break (Cooperation between Sejong University and SG company, South Korea)
+  - Investigated the acoustic performance of a novel thermal break using Ultra-High-Performance Concrete (UHPC) cores.
+- **2023–2024**: Develop a novel floating floor for apartments (Cooperation between Sejong University and Korea Disaster Prevention Technology Company Ltd., Seoul, South Korea)
+  - Developed a floating floor system with rubber cushions to reduce the heavy weight impact sound for apartments (Cooperation between Sejong University and Samsung C&T).
+- **2022–present**: Develop a novel modular connector for modular high-rise buildings 
+  - Conducted a study on the development
+- **2020–2022**: Develop a novel vibration attenuation for raceway lighting systems (Cooperation between Sejong University and Sehong Inc, Ltd, South Korea)
+  - Develop a novel vibration attenuation integrates pulley friction damper for raceway lighting systems to increase system survivability during earthquakes.
+
+
+
 
