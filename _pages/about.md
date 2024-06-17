@@ -29,13 +29,7 @@ redirect_from:
 
 ### Research Experience
 
-- **2023–present**: Develop a novel SG thermal break (Cooperation between Sejong University and SG company, South Korea)
-  - Investigated the acoustic performance of a novel thermal break using Ultra-High-Performance Concrete (UHPC) cores.
-
-- **2023–2024**: Develop a novel floating floor for apartments (Cooperation between Sejong University and Korea Disaster Prevention Technology Company Ltd., Seoul, South Korea)
-  - Developed a floating floor system with rubber cushions to reduce the heavy weight impact sound for apartments.
-
-- **2022–present**: Develop a novel modular connector for modular high-rise buildings (Cooperation between Sejong University and Samsung C&T, South Korea)
-
-- **2020–2022**: Develop a novel vibration attenuation for raceway lighting systems (Cooperation between Sejong University and Sehong Inc, Ltd, South Korea)
-  - Developed a novel vibration attenuation system integrating a pulley friction damper for raceway lighting systems to increase system survivability during earthquakes.
+- **2023–present**: Developed a novel SG thermal break in collaboration with SG company, investigating the acoustic performance using Ultra-High-Performance Concrete (UHPC) cores.
+- **2023–2024**: Developed a floating floor system with rubber cushions to reduce heavy weight impact sound for apartments, in partnership with Korea Disaster Prevention Technology Company Ltd.
+- **2022–present**: Developed a modular connector for high-rise buildings, in collaboration with Samsung C&T.
+- **2020–2022**: Developed a vibration attenuation system for raceway lighting, integrating a pulley friction damper to enhance earthquake survivability, in partnership with Sehong Inc, Ltd.
