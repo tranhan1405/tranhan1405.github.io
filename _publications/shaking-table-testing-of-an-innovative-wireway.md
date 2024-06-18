@@ -6,7 +6,8 @@ excerpt: 'Developed a vibration attenuation system for raceway lighting, integra
 date: 2022-08-19
 venue: 'Journal of Constructional Steel Research'
 paperurl: 'http://tranhan1405.github.io/files/Shaking table testing of an innovative wireway vibration attenuation system.pdf'
-citation: 'Tran, Van Han, Kim, S. C., Shin, J., & Lee, K. (2022). Shaking table testing of an innovative wireway vibration attenuation system. *Journal of Constructional Steel Research*, 197, 107477.'
+citation: 'Tran, Van Han, Kim, S. C., Shin, J., & Lee, K. (2022). Shaking table testing of an innovative wireway vibration attenuation system. Journal of Constructional Steel Research, 197, 107477.'
+
 BibTeX: |
   @article{tran2022shaking,
     title={Shaking table testing of an innovative wireway vibration attenuation system},
