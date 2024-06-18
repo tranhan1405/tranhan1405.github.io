@@ -10,3 +10,21 @@ citation: 'Tran-Van Han. V., Kim, S. C., Shin, J., & Lee, K. (2022). Experimenta
 ---
 **Abstract**: The pulley wireway system, a novel lighting support system reinforced with a pulley friction damper, can become an attractive earthquake-resistant alternative to conventional lighting systems in buildings. The goal of this research was to conduct a thorough evaluation of the seismic energy dissipation capacities of both a novel and an existing lighting support system under artificial earthquakes of varying magnitudes, generated using the ICC-ES AC156 standard. This was achieved by conducting tri-axial shaking table tests on two specimens suspended from the same height and using the same connector type. The experimental results demonstrated that the newly developed lighting support system with the damper was effective in reducing seismic energy and peak oscillation. The effectiveness of the damper was directly proportional to the magnitude of the earthquake, resulting in excellent adaptability of this innovative system to a wide range of earthquake events.
 
+BibTeX: 
+  <div style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+  <pre><code>
+@article{tran2022experimental,
+  title={Experimental study of a novel lighting support system reinforced with a pulley friction damper},
+  author={Tran, Han V and Kim, Sung Chan and Shin, Jiuk and Lee, Kihak},
+  journal={Journal of Building Engineering},
+  volume={52},
+  pages={104385},
+  year={2022},
+  doi = {https://doi.org/10.1016/j.jobe.2022.104385},
+  publisher={Elsevier}
+}
+  }
+  </code></pre>
+  </div>
+
+
