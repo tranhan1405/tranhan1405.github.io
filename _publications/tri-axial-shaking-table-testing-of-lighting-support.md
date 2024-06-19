@@ -2,6 +2,7 @@
 title: "Tri-axial shaking table testing of lighting support systems with pulley friction dampers and integrated dummy masses"
 collection: publications
 permalink: /publication/_publications/tri-axial-shaking-table-testing-of-lighting-support 
+excerpt: 'Developed a vibration attenuation system for raceway lighting, integrating a pulley friction damper to enhance earthquake survivability.'
 date: 2024-03-01
 venue: 'Results in Engineering'
 paperurl: 'http://tranhan1405.github.io/files/Tri-axial shaking table testing of lighting support systems with pulley friction dampers and integrated dummy masses.pdf'
