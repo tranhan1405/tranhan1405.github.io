@@ -18,8 +18,8 @@ BibTeX:
   journal={Construction and Building Materials},
   volume={419},
   pages={135410},
-year={2024},
-doi = {https://doi.org/10.1016/j.conbuildmat.2024.135410},
+  year={2024},
+  doi = {https://doi.org/10.1016/j.conbuildmat.2024.135410},
   publisher={Elsevier}
 }
   </code></pre>
