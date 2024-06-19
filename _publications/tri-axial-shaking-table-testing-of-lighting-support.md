@@ -17,8 +17,8 @@ BibTeX:
   journal={Results in Engineering},
   volume={21},
   pages={101706},
-year={2024},
-doi = {https://doi.org/10.1016/j.rineng.2023.101706},
+  year={2024},
+  doi = {https://doi.org/10.1016/j.rineng.2023.101706},
   publisher={Elsevier}
 }
   </code></pre>
