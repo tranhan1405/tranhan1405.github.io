@@ -3,7 +3,7 @@ title: "Instructor of Reinforced Concrete Structures Course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2017-Reinforced-Concrete-Structures
-venue: "Department of Civil Engineering, Mientrung University of Civil Engineering"
+venue: "Mientrung University of Civil Engineering, Department of Civil Engineering"
 date: 2017-09-01
 location: "Phu Yen, Vietnam"
 ---
