@@ -1,5 +1,5 @@
 ---
-title: "Reinforced Concrete Structures"
+title: "Instructor of Reinforced Concrete Structures Course"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2017-Reinforced-Concrete-Structures
