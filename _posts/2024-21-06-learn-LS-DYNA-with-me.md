@@ -8,7 +8,6 @@ tags:
   - FEM
   - tutorial
 ---
-Sure, I will use MathJax to present the equations and concepts clearly.
 
 Concept of Finite Element Analysis (FEA):
 ======
