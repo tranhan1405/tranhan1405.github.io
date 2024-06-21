@@ -10,7 +10,7 @@ tags:
 ---
 Sure, I will use MathJax to present the equations and concepts clearly.
 
-### Concept of Finite Element Analysis (FEA)
+Concept of Finite Element Analysis (FEA):
 ======
 
 1. **Definition and Purpose**:
