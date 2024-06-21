@@ -43,17 +43,7 @@ Concept of Finite Element Analysis (FEA):
 7. **Global System of Equations**:
    - In matrix notation, the global system of equations can be expressed as:
 
-   \[
-   \mathbf{K} \mathbf{u} = \mathbf{F}
-   \]
-
-   where:
-   - \(\mathbf{K}\) is the system stiffness matrix,
-   - \(\mathbf{u}\) is the vector of unknowns,
-   - \(\mathbf{F}\) is the force vector.
-
-   Depending on the nature of the problem, \(\mathbf{K}\) may depend on \(\mathbf{u}\) (i.e., \(\mathbf{K} = \mathbf{K}(\mathbf{u})\)), and \(\mathbf{F}\) may be time-dependent (i.e., \(\mathbf{F} = \mathbf{F}(t)\)).
-
+  
 
 Reference:
 ======
