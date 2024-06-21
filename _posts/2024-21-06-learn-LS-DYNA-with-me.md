@@ -1,7 +1,7 @@
 ---
 title: 'Learn LS-DYNA with me - Section 1: Basics of FEA'
 date: 2024-21-06
-permalink: /posts/2024/06/blog-post-4/2024-06-21-learn-LS-DYNA-with-me/
+permalink: /posts/2024/06/blog-post-4/learn-LS-DYNA-with-me/
 tags:
   - LS-DYNA
   - FEA
