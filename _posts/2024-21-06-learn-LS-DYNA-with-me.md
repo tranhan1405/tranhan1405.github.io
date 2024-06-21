@@ -1,55 +1,14 @@
 ---
-title: 'Learn LS-DYNA with me - Section 1: Basics of FEA'
-date: 2024-21-06
-permalink: /posts/2024/06/blog-post-4/learn-LS-DYNA-with-me/
+title: 'Blog Post number 4'
+date: 2015-08-14
+permalink: /posts/2012/08/blog-post-4/
 tags:
-  - LS-DYNA
-  - FEA
-  - FEM
-  - tutorial
+  - cool posts
+  - category1
+  - category2
 ---
 
-Concept of Finite Element Analysis (FEA):
-======
-
-1. **Definition and Purpose**:
-   - Finite Element Analysis (FEA) is a computational technique introduced by Turner et al. in 1956. It is used for finding approximate solutions to a variety of real-world engineering problems that involve complex domains and boundary conditions. FEA is crucial in modeling physical phenomena in various engineering disciplines, such as solids, liquids, and gases.
-
-2. **Field Variables**:
-   - The field variables in FEA vary from point to point within a domain. A domain is a continuum with a known boundary that encompasses the problem space.
-
-3. **Decomposition and Meshing**:
-   - FEA involves decomposing the domain into a finite number of subdomains or elements. This process is called meshing or discretization. The systematic approximate solution is constructed by applying variational or weighted residual methods.
-
-4. **Elements and Nodes**:
-   - The problem is reduced to a finite number of unknowns by dividing the domain into elements. The unknown field variable is expressed in terms of assumed approximating functions within each element.
-   - These functions, also called interpolation functions, are defined in terms of the values of the field variables at specific points, referred to as nodes. Nodes are typically located along the element boundaries, connecting adjacent elements.
-
-5. **Process Steps**:
-   - **Discretization**: Dividing the domain into a finite number of subdomains (elements).
-   - **Interpolation Functions**: Selecting appropriate interpolation functions for the elements.
-   - **Element Matrix Development**: Developing the element matrix for each subdomain.
-   - **Assembly**: Assembling the element matrices to form the global matrix.
-   - **Boundary Conditions**: Imposing the boundary conditions.
-   - **Equation Solution**: Solving the global system of equations.
-   - **Additional Computations**: Performing any additional necessary computations.
-
-6. **Solution Approaches**:
-   - **Direct Approach**: Used for relatively simple problems, often to explain FEA concepts and important steps.
-   - **Weighted Residuals**: A versatile method suitable for various problems, directly utilizing the governing differential equations (e.g., heat transfer, fluid mechanics).
-   - **Variational Approach**: Based on the calculus of variations, this approach is used for problems involving functional extremization, such as potential energy in structural mechanics.
-
-7. **Global System of Equations**:
-   - In matrix notation, the global system of equations can be expressed as:
-
-  
-
-Reference:
-======
-[1] Madenci, E., & Guven, I. (2015). The finite element method and applications in engineering using ANSYS®. Springer.
-
-
-
+This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.
 
 Headings are cool
 ======
