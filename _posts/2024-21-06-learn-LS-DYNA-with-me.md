@@ -1,6 +1,6 @@
 ---
 title: 'Blog Post number 4'
-date: 2015-08-14
+date: 2024-06-21
 permalink: /posts/2012/08/blog-post-4/
 tags:
   - cool posts
@@ -8,7 +8,8 @@ tags:
   - category2
 ---
 
-### Concept of Finite Element Analysis (FEA)
+Concept of Finite Element Analysis (FEA)
+===
 
 1. **Definition and Purpose**:
    - Finite Element Analysis (FEA) is a computational technique introduced by Turner et al. in 1956. It is used for finding approximate solutions to a variety of real-world engineering problems that involve complex domains and boundary conditions. FEA is crucial in modeling physical phenomena in various engineering disciplines, such as solids, liquids, and gases.
