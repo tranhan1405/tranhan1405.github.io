@@ -54,8 +54,9 @@ Sure, I will use MathJax to present the equations and concepts clearly.
 
    Depending on the nature of the problem, \(\mathbf{K}\) may depend on \(\mathbf{u}\) (i.e., \(\mathbf{K} = \mathbf{K}(\mathbf{u})\)), and \(\mathbf{F}\) may be time-dependent (i.e., \(\mathbf{F} = \mathbf{F}(t)\)).
 
-======
+
 Reference:
+======
 [1] Madenci, E., & Guven, I. (2015). The finite element method and applications in engineering using ANSYS®. Springer.
 
 
