@@ -11,7 +11,7 @@ tags:
 ## How to Evaluate Acoustic Response to Impact Sound Levels in Building Structures
 
 ### Introduction
-Impact sound transmission in buildings is a crucial factor for acoustic comfort. Accurately assessing impact sound levels requires a structured methodology that considers various influencing factors, including background noise. This blog post outlines a detailed procedure to evaluate the acoustic response to impact sounds, facilitating reliable classification of impact sound levels in building structures.
+Impact sound transmission in buildings is a crucial factor for acoustic comfort. Accurately assessing impact sound levels requires a structured methodology that considers various influencing factors, including background noise. This post outlines a detailed procedure to evaluate the acoustic response to impact sounds, facilitating reliable classification of impact sound levels in building structures.
 
 ### Step 1: Input Impact Sound Measurement Data
 First, measure the sound pressure levels at five distinct measurement points for each of the five tapping points. This setup ensures comprehensive data collection across the testing area.
@@ -77,7 +77,7 @@ Finally, classify the floor impact sound level based on the calculated final imp
 
 **Table 2.2** A-weighted Maximum Impact Sound Level Grades
 
-| Grade | A-weighted Maximum Impact Sound Level $$(L'_{iA, F_{\text{max}}}$$ |
+| Grade | A-weighted Maximum Impact Sound Level $$L_{iA, F_{\text{max}}}$$ |
 | ----- | ------------------------------------------------------ |
 | 1     | $$\leq 37 $$                                         |
 | 2     | $$37 < L'_{iA, F_{\text{max}}} \leq 41 $$            |
