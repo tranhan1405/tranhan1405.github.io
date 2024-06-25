@@ -26,9 +26,9 @@ L = 10 \log \left( 10^{L_{sb}/10} - 10^{L_b/10} \right)
 $$
 
 where:
-- \( L \) is the corrected sound pressure level in dB,
-- \( L_{sb} \) is the measured sound pressure level including background noise in dB,
-- \( L_b \) is the background noise level in dB.
+- $$ L $$ is the corrected sound pressure level in dB,
+- $$L_{sb} $$is the measured sound pressure level including background noise in dB,
+- $$L_b $$is the background noise level in dB.
 
 ### Step 3: Calculate Average Energy Level of Maximum Sound Pressure for Each Tapping Point
 After measuring, average the maximum sound pressure levels from the five measurement points on the floor below using the following formula:
@@ -38,8 +38,8 @@ L_{i, F_{\text{max}}, j} = 10 \log \left( \frac{1}{m} \sum_{k=1}^m 10^{L_{F_{\te
 $$
 
 where:
-- \( L_{i, F_{\text{max}}, j} \) represents the average maximum sound pressure level at the \(i\)-th tapping point,
-- \( L_{F_{\text{max}}, k} \) is the maximum sound pressure level at the \(k\)-th microphone position.
+- $$L_{i, F_{\text{max}}, j} $$represents the average maximum sound pressure level at the \(i\)-th tapping point,
+- $$L_{F_{\text{max}}, k} $$is the maximum sound pressure level at the \(k\)-th microphone position.
 
 ### Step 4: Calculate Average Sound Pressure Level for Each Tapping Point
 Next, average the sound pressure levels for all tapping points to find the final impact sound level using the following formula:
@@ -49,7 +49,7 @@ L_{i, F_{\text{max}}} = 10 \log \left( \frac{1}{n} \sum_{k=1}^n 10^{L_{i, F_{\te
 $$
 
 where:
-- \( L_{i, F_{\text{max}}} \) is the average maximum sound pressure level for the \(i\)-th tapping point.
+- $$L_{i, F_{\text{max}}} $$is the average maximum sound pressure level for the \(i\)-th tapping point.
 
 ### Step 5: Apply A-weighting
 Adjust the calculated impact sound levels using A-weighting factors according to the table provided (Table 2.1), which aligns the measurements with human auditory perception.
@@ -69,8 +69,8 @@ L_{iA, F_{\text{max}}} = 10 \log \left( \sum_{j} 10^{(X_{i, F_{\text{max}}, j} +
 $$
 
 where:
-- \( X_{i, F_{\text{max}}, j} \) is the maximum sound pressure level for each frequency band,
-- \( A_j \) is the A-weighting correction factor.
+- $$X_{i, F_{\text{max}}, j} $$is the maximum sound pressure level for each frequency band,
+- $$A_j $$is the A-weighting correction factor.
 
 ### Step 7: Grade Based on Average Final Impact Sound Level
 Finally, classify the floor impact sound level based on the calculated final impact sound level using the grading criteria provided in Table 2.2.
@@ -79,10 +79,10 @@ Finally, classify the floor impact sound level based on the calculated final imp
 
 | Grade | A-weighted Maximum Impact Sound Level (\(L'_{iA, F_{\text{max}}}\)) |
 | ----- | ------------------------------------------------------ |
-| 1     | \( \leq 37 \)                                          |
-| 2     | \( 37 < L'_{iA, F_{\text{max}}} \leq 41 \)             |
-| 3     | \( 41 < L'_{iA, F_{\text{max}}} \leq 45 \)             |
-| 4     | \( 45 < L'_{iA, F_{\text{max}}} \leq 49 \)             |
+| 1     | $$\leq 37 $$                                         |
+| 2     | $$37 < L'_{iA, F_{\text{max}}} \leq 41 $$            |
+| 3     | $$41 < L'_{iA, F_{\text{max}}} \leq 45 $$            |
+| 4     | $$45 < L'_{iA, F_{\text{max}}} \leq 49 $$            |
 
 ### Conclusion
 This detailed procedure ensures precise measurement, adjustment, and classification of impact sound levels in buildings, contributing to enhanced acoustic comfort. By following these steps and applying the outlined formulas, researchers and engineers can accurately evaluate and classify the impact sound levels in various building environments.
