@@ -7,6 +7,9 @@ tags:
   - Building Acoustics
   - Standard
 ---
+I apologize for the confusion earlier. Here is the corrected markdown format with MathJax equations properly formatted:
+
+---
 
 ## How to Evaluate Acoustic Response to Impact Sound Levels in Building Structures
 
@@ -21,9 +24,9 @@ First, measure the sound pressure levels at five distinct measurement points for
 ### Step 2: Adjust for Background Noise Influence
 To account for the influence of background noise, corrections are applied if the difference between the background noise level and the measured sound pressure level falls between 6 dB and 15 dB. The corrected sound pressure level is calculated using the following formula:
 
-\[ 
-L = 10 \log \left( 10^{L_{sb}/10} - 10^{L_b/10} \right) 
-\]
+$$
+L = 10 \log \left( 10^{L_{sb}/10} - 10^{L_b/10} \right)
+$$
 
 where:
 - \( L \) is the corrected sound pressure level in dB,
@@ -33,9 +36,9 @@ where:
 ### Step 3: Calculate Average Energy Level of Maximum Sound Pressure for Each Tapping Point
 After measuring, average the maximum sound pressure levels from the five measurement points on the floor below using the following formula:
 
-\[ 
-L_{i, F_{\text{max}}, j} = 10 \log \left( \frac{1}{m} \sum_{k=1}^m 10^{L_{F_{\text{max}}, k}/10} \right) 
-\]
+$$
+L_{i, F_{\text{max}}, j} = 10 \log \left( \frac{1}{m} \sum_{k=1}^m 10^{L_{F_{\text{max}}, k}/10} \right)
+$$
 
 where:
 - \( L_{i, F_{\text{max}}, j} \) represents the average maximum sound pressure level at the \(i\)-th tapping point,
@@ -44,9 +47,9 @@ where:
 ### Step 4: Calculate Average Sound Pressure Level for Each Tapping Point
 Next, average the sound pressure levels for all tapping points to find the final impact sound level using the following formula:
 
-\[ 
-L_{i, F_{\text{max}}} = 10 \log \left( \frac{1}{n} \sum_{k=1}^n 10^{L_{i, F_{\text{max}}, k}/10} \right) 
-\]
+$$
+L_{i, F_{\text{max}}} = 10 \log \left( \frac{1}{n} \sum_{k=1}^n 10^{L_{i, F_{\text{max}}, k}/10} \right)
+$$
 
 where:
 - \( L_{i, F_{\text{max}}} \) is the average maximum sound pressure level for the \(i\)-th tapping point.
@@ -64,9 +67,9 @@ Adjust the calculated impact sound levels using A-weighting factors according to
 ### Step 6: Calculate Final Impact Sound Level Using A-weighted Values
 Use the A-weighted sound pressure levels to compute the final impact sound level, as shown in the following formula:
 
-\[ 
-L_{iA, F_{\text{max}}} = 10 \log \left( \sum_{j} 10^{(X_{i, F_{\text{max}}, j} + A_j)/10} \right) 
-\]
+$$
+L_{iA, F_{\text{max}}} = 10 \log \left( \sum_{j} 10^{(X_{i, F_{\text{max}}, j} + A_j)/10} \right)
+$$
 
 where:
 - \( X_{i, F_{\text{max}}, j} \) is the maximum sound pressure level for each frequency band,
@@ -90,6 +93,9 @@ This detailed procedure ensures precise measurement, adjustment, and classificat
 #### References
 - International Standard Organization. ISO 140-7: "Acoustics - Measurement of sound insulation in buildings and of building elements - Part 7: Field measurements of impact sound insulation of floors."
 - Korean Standard KS F 2863: "Field measurement of floor impact sound insulation."
+```
+
+This markdown format includes the appropriate MathJax delimiters for rendering the mathematical equations. Display equations are enclosed within `$$...$$`, and inline equations are enclosed within `\(...\)`.
 
 
 
