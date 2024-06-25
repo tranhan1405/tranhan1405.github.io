@@ -78,9 +78,9 @@ Finally, classify the floor impact sound level based on the calculated final imp
 
 **Table 2.2** A-weighted Maximum Impact Sound Level Grades
 
-| Grade | A-weighted Maximum Impact Sound Level L'_{iA, F_{\text{max}}} |
+| Grade | A-weighted Maximum Impact Sound Level  |
 | ----- | ------------------------------------------------------ |
-| 1     | $$\leq 37 $$                                         |
+| 1     | $$ L'_{iA, F_{\text{max}}} \leq 37 $$                                         |
 | 2     | $$37 < L'_{iA, F_{\text{max}}} \leq 41 $$            |
 | 3     | $$41 < L'_{iA, F_{\text{max}}} \leq 45 $$            |
 | 4     | $$45 < L'_{iA, F_{\text{max}}} \leq 49 $$            |
