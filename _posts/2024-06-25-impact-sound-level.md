@@ -1,7 +1,7 @@
 ---
-title: 'Blog Post number 3'
+title: 'Evaluation of Acoustic Response to Impact Sound Levels in Building Structures - Korean Standard'
 date: 2024-06-25
-permalink: /posts/2014/08/blog-post-8/
+permalink: /posts/2024/06/blog-post-8/
 tags:
   - Impact sound
   - Building Acoustics
