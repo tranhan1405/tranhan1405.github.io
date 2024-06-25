@@ -61,7 +61,7 @@ Adjust the calculated impact sound levels using A-weighting factors according to
 | Frequency                | 50 Hz | 63 Hz | 80 Hz | 100 Hz | 125 Hz | 160 Hz | 200 Hz | 250 Hz | 315 Hz | 400 Hz | 500 Hz | 630 Hz |
 |--------------------------|-------|-------|-------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | **One-third octave bands A(dB)** | -30.3 | -26.2 | -22.4 | -19.1  | -16.2  | -13.2  | -10.8  | -8.7   | -6.6   | -4.8   | -3.2   | -1.9   |
-| **Octave bands A(dB)**           | -26.2 |       |       | -16.2  |        |        | -8.7   |        |        |   -3.2     |        |        |
+| **Octave bands A(dB)**           |       | -26.2  |       |       |-16.2   |        |        |  -8.7      |        |        | -3.2    |        |
 
 ### Step 6: Calculate Final Impact Sound Level Using A-weighted Values
 Use the A-weighted sound pressure levels to compute the final impact sound level, as shown in the following formula:
