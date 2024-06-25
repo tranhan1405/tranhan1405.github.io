@@ -83,5 +83,8 @@ This study presents a detailed procedure for evaluating the acoustic response to
 - International Standard Organization. ISO 140-7: "Acoustics - Measurement of sound insulation in buildings and of building elements - Part 7: Field measurements of impact sound insulation of floors." 
 - Korean Standard KS F 2863: "Field measurement of floor impact sound insulation."
 
+By following these steps and applying the outlined formulas, researchers and engineers can accurately evaluate and classify the impact sound levels in various building environments.
+
+
 
 
