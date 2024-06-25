@@ -54,7 +54,6 @@ where:
 ### Step 5: Apply A-weighting
 Adjust the calculated impact sound levels using A-weighting factors according to the table provided (Table 2.1), which aligns the measurements with human auditory perception.
 
-**Table 2.1** A-weighting factors by frequency
 
 **Table 2.1** A-weighting factors by frequency
 
