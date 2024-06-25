@@ -7,9 +7,6 @@ tags:
   - Building Acoustics
   - Standard
 ---
-I apologize for the confusion earlier. Here is the corrected markdown format with MathJax equations properly formatted:
-
----
 
 ## How to Evaluate Acoustic Response to Impact Sound Levels in Building Structures
 
@@ -95,7 +92,7 @@ This detailed procedure ensures precise measurement, adjustment, and classificat
 - Korean Standard KS F 2863: "Field measurement of floor impact sound insulation."
 ```
 
-This markdown format includes the appropriate MathJax delimiters for rendering the mathematical equations. Display equations are enclosed within `$$...$$`, and inline equations are enclosed within `\(...\)`.
+
 
 
 
