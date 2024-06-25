@@ -1,5 +1,5 @@
 ---
-title: 'Evaluation of Acoustic Response to Impact Sound Levels in Building Structures - Korean Standard'
+title: 'Evaluation of Acoustic Response of Impact Sound Levels of Floor Structures - Korean Standard'
 date: 2024-06-25
 permalink: /posts/2024/06/blog-post-8/
 tags:
@@ -8,10 +8,11 @@ tags:
   - Standard
 ---
 
-## How to Evaluate Acoustic Response to Impact Sound Levels in Building Structures
+## How to Evaluate Acoustic Response of Impact Sound Levels of Floor Structures
 
 ### Introduction
-Impact sound transmission in buildings is a crucial factor for acoustic comfort. Accurately assessing impact sound levels requires a structured methodology that considers various influencing factors, including background noise. This post outlines a detailed procedure to evaluate the acoustic response to impact sounds, facilitating reliable classification of impact sound levels in building structures.
+Apartment residents are frequently disturbed by various noises, especially floor impact noise, leading to numerous complaints. Regulating floor noise legally is particularly challenging due to varying sensitivities, and no clear solution has been found. Heavy impact noises from children's activities (running, jumping), footsteps, and falling objects are the most common sources of indoor noise. This post outlines a detailed procedure to evaluate the acoustic response of impact sounds, facilitating reliable classification of impact sound levels of floor structures.
+
 
 ### Step 1: Input Impact Sound Measurement Data
 First, measure the sound pressure levels at five distinct measurement points for each of the five tapping points. This setup ensures comprehensive data collection across the testing area.
