@@ -11,7 +11,7 @@ redirect_from:
 
 
 ### Education
-- **2024–present**: Postdoctoral Researcher, [Mechanical Engineering Laboratory (LGCGM)](https://www.insa-rennes.fr/en/lgcgm.html), [INSA Rennes](https://www.insa-rennes.fr/index.html), Rennes, South Korea, France
+- **2024–present**: Postdoctoral Researcher, [Mechanical Engineering Laboratory (LGCGM)](https://www.insa-rennes.fr/en/lgcgm.html), [INSA Rennes](https://www.insa-rennes.fr/index.html), Rennes, France
 
 - **2023–2024**: Postdoctoral Researcher, Department of Architectural Engineering,  
   [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea
