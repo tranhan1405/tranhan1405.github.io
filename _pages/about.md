@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-- Dr. Tran Van Han is a Postdoctoral Researcher at Civil and Mechanical Engineering Laboratory (LGCGM), INSA Rennes, Rennes, France. He completed his PhD in Architectural Engineering at Sejong University in 2023. His research is primarily focused on finite element analysis, building acoustics, steel structures, and concrete structures.
+- Dr. Tran Van Han is a Postdoctoral Researcher at the Civil and Mechanical Engineering Laboratory (LGCGM) at INSA Rennes in France. He earned his PhD in Architectural Engineering from Sejong University in 2023. His research expertise lies in finite element analysis, building acoustics, and the structural analysis of steel and concrete.
 
 
 ### Education
