@@ -14,10 +14,10 @@ redirect_from:
 - **2024–present**: Postdoctoral Researcher, [Mechanical Engineering Laboratory (LGCGM)](https://www.insa-rennes.fr/en/lgcgm.html), [INSA Rennes](https://www.insa-rennes.fr/index.html), Rennes, France
 
 - **2023–2024**: Postdoctoral Researcher, Department of Architectural Engineering,  
-  [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea
+  [Sejong University](http://home.sejong.ac.kr/~kihaklee/), Seoul, South Korea
 
 - **2019–2023**: PhD Candidate, Department of Architectural Engineering, 
-  [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea
+  [Sejong University](http://home.sejong.ac.kr/~kihaklee/), Seoul, South Korea
 
 - **2010–2015**: Bachelor of Engineering, Department of Civil Engineering  
   [Hanoi Architectural University](https://hau.edu.vn/?lang=en), Hanoi, Vietnam
