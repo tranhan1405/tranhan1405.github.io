@@ -16,7 +16,7 @@ redirect_from:
   - Earthquake-resistant Structures, Finite Element Analysis, Building Acoustic, Steel Structures, Concrete Structures
 
 ### Contact Information
-- **Department:** Architectural Engineering, [Sejong University](https://en.sejong.ac.kr/eng/index.do), Seoul, South Korea
+- **Address:** [Civil and Mechanical Engineering Laboratory (LGCGM)](https://www.insa-rennes.fr/en/lgcgm.html),  [INSA Rennes](https://www.insa-rennes.fr/index.html), Rennes, France
 - **Mobile:** (+82) 1072171405
 - **Email:** [tranhan1405@gmail.com](mailto:tranhan1405@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/tranhan1405/)
@@ -28,7 +28,8 @@ redirect_from:
 
 | Position                                          | Institution                                                                 | Location             | Dates        |
 |---------------------------------------------------|-----------------------------------------------------------------------------|----------------------|--------------|
-| Postdoctoral Researcher, Architectural Engineering | [Sejong University](https://en.sejong.ac.kr/eng/index.do)                   | Seoul, South Korea   | 2023–present |
+| Postdoctoral Researcher, Civil Engineering         | [INSA Rennes](https://www.insa-rennes.fr/index.html)                       | Rennes, France        | 2024–present |
+| Postdoctoral Researcher, Architectural Engineering | [Sejong University](https://en.sejong.ac.kr/eng/index.do)                   | Seoul, South Korea   | 2023–2024    |
 | PhD Candidate, Architectural Engineering           | [Sejong University](https://en.sejong.ac.kr/eng/index.do)                   | Seoul, South Korea   | 2019–2023    |
 | Bachelor of Engineering, Civil Engineering         | [Hanoi Architectural University](https://hau.edu.vn/?lang=en)               | Hanoi, Vietnam       | 2010–2015    |
 
