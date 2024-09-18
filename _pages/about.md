@@ -12,10 +12,10 @@ Dr. Tran Van Han is a Postdoctoral Researcher at the Civil and Mechanical Engine
 ### Education
 - **2024–present**: Postdoctoral Researcher, [Civil and Mechanical Engineering Laboratory (LGCGM)](https://www.insa-rennes.fr/en/lgcgm.html), [INSA Rennes](https://www.insa-rennes.fr/index.html), Rennes, France
 
-- **2023–2024**: Postdoctoral Researcher, Department of Architectural Engineering,  
+- **2023–2024**: Postdoctoral Researcher,[Department of Architectural Engineering](https://home.sejong.ac.kr/~kihaklee/),  
   [Sejong University](http://home.sejong.ac.kr/~kihaklee/), Seoul, South Korea
 
-- **2019–2023**: PhD Candidate, Department of Architectural Engineering, 
+- **2019–2023**: PhD Candidate, [Department of Architectural Engineering](https://home.sejong.ac.kr/~kihaklee/), 
   [Sejong University](http://home.sejong.ac.kr/~kihaklee/), Seoul, South Korea
 
 - **2010–2015**: Bachelor of Engineering, Department of Civil Engineering  
