@@ -37,18 +37,19 @@ redirect_from:
 ### Publications
 #### Refereed Journal Articles (SCI Journals)
 
-| Authors | Title | Journal | Year |
-|---------|-------|---------|------|
 
-| **_Tran-Van Han_**, Sung Chan Kim, Jiuk Shin, Kihak Lee | [Biaxial full-scale shaking table test program of innovative wireway vibration attenuation systems](https://doi.org/10.1016/j.jobe.2024.110792) | *Journal of Building Engineering*, 97, 110792 | 2024 |
-| **_Tran-Van Han_**, Gayoon Lee, HanSang Whan, Tae-Sang An, Chan-Yu Jeong, Kihak Lee | [ASSESSMENT OF SOUND INSULATION FOR INNOVATIVE ULTRA-HIGH-PERFORMANCE CONCRETE CORE THERMAL BREAKS](http://www.scopus.com/inward/record.url?eid=2-s2.0-85205371805&partnerID=MN8TOARS) | *Proceedings of the 30th International Congress on Sound and Vibration*, Amsterdam, Netherlands | 2024 |
-| Nguyuen Huu Cuong, Hyoseo An, **_Han V Tran_**, Sanghee An, Jiuk Shin, Kihak Lee | [Structural test and FEM analysis of a thermal bridge connection employing the UHPC system for concrete cladding wall](https://doi.org/10.1016/j.rineng.2024.102191) | *Results in Engineering*, 102191 | 2024 |
-| Nguyuen Huu Cuong, Hyoseo An, **_Han V Tran_**, Sanghee An, Kihak Lee | [Structural test and analyses of UHPC horizontal connection with shear keys for slab-external PC wall](https://doi.org/10.1016/j.conbuildmat.2024.135410) | *Construction and Building Materials*, 419, 135410 | 2024 |
-| **_Tran-Van Han_**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen-Vu Luat, Kihak Lee | [Numerical study on compressive behavior of a 3D-printed sand mold-cast S-CN connector](https://doi.org/10.1016/j.jcsr.2023.108336) | *Journal of Constructional Steel Research*, 213, 108336 | 2024 |
-| **_Tran-Van Han_**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee | [Tri-Axial Shaking Table Testing of Lighting Support Systems with Pulley Friction Dampers and Integrated Dummy Masses](https://doi.org/10.1016/j.rineng.2023.101706) | *Results in Engineering*, 21, 101706 | 2024 |
-| **_Tran-Van Han_**, Gayoon Lee, HanSang Whan, Tae-Sang An, Chan-Yu Jeong, Kihak Lee | [Vibro-Acoustic Numerical Simulation for Floor Noise Analysis of an Apartment Building with Floating Floors](https://www.scopus.com/record/display.uri?eid=2-s2.0-85170637631&origin=resultslist) | *Proceedings of the 29th International Congress on Sound and Vibration*, Prague | 2023 |
-| **_Tran-Van Han_**, Sung Chan Kim, Jiuk Shin, Kihak Lee | [Experimental study of a novel lighting support system reinforced with a pulley friction damper](https://doi.org/10.1016/j.jobe.2022.104385) | *Journal of Building Engineering*, 52, 104385 | 2022 |
-| **_Tran-Van Han_**, Sung Chan Kim, Jiuk Shin, Kihak Lee | [Shaking table testing of an innovative wireway vibration attenuation system](https://doi.org/10.1016/j.jcsr.2022.107477) | *Journal of Constructional Steel Research*, 197, 10747 | 2022 |
+| Authors                    | Title                                                                                     | Journal                                | Year |
+|--------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------|-----------|
+| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Biaxial full-scale shaking table test program of innovative wireway vibration attenuation systems | *Journal of Building Engineering, 97*, 110792 | 2024 |
+| **Tran-Van Han**, Gayoon Lee, HanSang Whan, Tae-Sang An, Chan-Yu Jeong, Kihak Lee | Assessment of Sound Insulation for Innovative Ultra-High-Performance Concrete Core Thermal Breaks | *Proceedings of the 30th International Congress on Sound and Vibration*, Amsterdam, Netherlands | 2024 |
+| Nguyen Huu Cuong, Hyoseo An, **Han V Tran**, Sanghee An, Jiuk Shin, Kihak Lee | Structural test and FEM analysis of a thermal bridge connection employing the UHPC system for concrete cladding wall | *Results in Engineering*, 102191 | 2024 |
+| Nguyen Huu Cuong, Hyoseo An, **Han V Tran**, Sanghee An, Kihak Lee | Structural test and analyses of UHPC horizontal connection with shear keys for slab-external PC wall | *Construction and Building Materials, 419*, 135410 | 2024 |
+| **Tran-Van Han**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen-Vu Luat, Kihak Lee | Numerical study on compressive behavior of a 3D-printed sand mold-cast S-CN connector | *Journal of Constructional Steel Research, 213*, 108336 | 2024 |
+| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee | Tri-Axial Shaking Table Testing of Lighting Support Systems with Pulley Friction Dampers and Integrated Dummy Masses | *Results in Engineering, 21*, 101706 | 2024 |
+| **Tran-Van Han**, Gayoon Lee, HanSang Whan, Tae-Sang An, Chan-Yu Jeong, Kihak Lee | Vibro-Acoustic Numerical Simulation for Floor Noise Analysis of an Apartment Building with Floating Floors | *Proceedings of the 29th International Congress on Sound and Vibration*, Prague | 2023 |
+| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Experimental study of a reinforcing support system reinforced with a pulley friction damper | *Journal of Building Engineering, 52*, 104385 | 2022 |
+| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Shaking table testing of an innovative wireway vibration attenuation system | *Journal of Constructional Steel Research, 197*, 10747 | 2022 |
+
 
 #### Working Papers
 
