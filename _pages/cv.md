@@ -47,8 +47,8 @@ redirect_from:
 | **Tran-Van Han**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen-Vu Luat, Kihak Lee | Numerical study on compressive behavior of a 3D-printed sand mold-cast S-CN connector | *Journal of Constructional Steel Research, 213*, 108336 | 2024 |
 | **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee | Tri-Axial Shaking Table Testing of Lighting Support Systems with Pulley Friction Dampers and Integrated Dummy Masses | *Results in Engineering, 21*, 101706 | 2024 |
 | **Tran-Van Han**, Gayoon Lee, HanSang Whan, Tae-Sang An, Chan-Yu Jeong, Kihak Lee | Vibro-Acoustic Numerical Simulation for Floor Noise Analysis of an Apartment Building with Floating Floors | *Proceedings of the 29th International Congress on Sound and Vibration*, Prague | 2023 |
-| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Experimental study of a reinforcing support system reinforced with a pulley friction damper | *Journal of Building Engineering, 52*, 104385 | 2022 |
-| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Shaking table testing of an innovative wireway vibration attenuation system | *Journal of Constructional Steel Research, 197*, 10747 | 2022 |
+| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Experimental study of a reinforcing support system reinforced with a pulley friction damper | *Journal of Building Engineering*| , 52, 104385 | 2022 |
+| **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Shaking table testing of an innovative wireway vibration attenuation system | *Journal of Constructional Steel Research*|, 197, 10747 | 2022 |
 
 
 #### Working Papers
