@@ -39,6 +39,9 @@ redirect_from:
 
 | Authors | Title | Journal | Year |
 |---------|-------|---------|------|
+
+| **_Tran-Van Han_**, Sung Chan Kim, Jiuk Shin, Kihak Lee | [Biaxial full-scale shaking table test program of innovative wireway vibration attenuation systems](https://doi.org/10.1016/j.jobe.2024.110792) | *Journal of Building Engineering*, 97, 110792 | 2024 |
+| **_Tran-Van Han_**, Gayoon Lee, HanSang Whan, Tae-Sang An, Chan-Yu Jeong, Kihak Lee | [ASSESSMENT OF SOUND INSULATION FOR INNOVATIVE ULTRA-HIGH-PERFORMANCE CONCRETE CORE THERMAL BREAKS](http://www.scopus.com/inward/record.url?eid=2-s2.0-85205371805&partnerID=MN8TOARS) | *Proceedings of the 30th International Congress on Sound and Vibration*, Amsterdam, Netherlands | 2024 |
 | Nguyuen Huu Cuong, Hyoseo An, **_Han V Tran_**, Sanghee An, Jiuk Shin, Kihak Lee | [Structural test and FEM analysis of a thermal bridge connection employing the UHPC system for concrete cladding wall](https://doi.org/10.1016/j.rineng.2024.102191) | *Results in Engineering*, 102191 | 2024 |
 | Nguyuen Huu Cuong, Hyoseo An, **_Han V Tran_**, Sanghee An, Kihak Lee | [Structural test and analyses of UHPC horizontal connection with shear keys for slab-external PC wall](https://doi.org/10.1016/j.conbuildmat.2024.135410) | *Construction and Building Materials*, 419, 135410 | 2024 |
 | **_Tran-Van Han_**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen-Vu Luat, Kihak Lee | [Numerical study on compressive behavior of a 3D-printed sand mold-cast S-CN connector](https://doi.org/10.1016/j.jcsr.2023.108336) | *Journal of Constructional Steel Research*, 213, 108336 | 2024 |
@@ -51,10 +54,15 @@ redirect_from:
 
 | Authors | Title | Journal | Status | Year |
 |---------|-------|---------|--------|------|
-| **_Tran-Van Han_**, Gayoon Lee, Nguyen Huu Cuong, Nguyen Huu Cuong, Kihak Lee | Acoustic Insulation Performance of Novel UHPC-Core Thermal Breaks in Building Wall Intersections | *Applied Acoustics* | Under Review | 2024 |
-| **_Tran-Van Han_**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen Huu Cuong, Kihak Lee | Experimental and Numerical Evaluation of the Structural Performance of Novel S-CN Connections in Modular Construction | *Structures* | Under Review | 2024 |
+| **_Tran-Van Han_**, Gayoon Lee, Nguyen Huu Cuong, Nguyen Huu Cuong, Kihak Lee | Experimental and numerical study of the acoustic performance of a novel composite core thermal break | *Applied Acoustics* | Under Review | 2024 |
+
+| **_Tran-Van Han_**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen Huu Cuong, Kihak Lee | Experimental and Numerical Evaluation of the Structural Performance of Novel S-CN Connections in Modular Construction | *Structures* | Revision | 2024 |
+
+| **_Tran-Van Han_**, Gayoon Lee, Sang Whan han, Tae-Sang An, Chan-Yu Jeong , Kihak Lee | Vibro-Acoustic Testing on Impact Sound Performance of Novel Floating Floor Systems with Rubber Cushions  | *Building and Environment * | Under review | 2024 |
+
+| **_Tran-Van Han_**, Gayoon Lee, Sang Whan han, Tae-Sang An, Chan-Yu Jeong , Kihak Lee | Experimental and Numerical Study of Novel Floating Floors with Tunnel-Shaped Rubber Cushions for Heavy Impact Sound Reduction | *Journal of Building Engineering * | Revision | 2024 |
+
 | **_Tran-Van Han_**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Tra Ngoc Sanh, Kihak Lee | Experimental and Analytical Studies on the Compressive Behaviors of a 3D-Printed Sand Mold-Cast S-CN Connector in Modular Steel Buildings | *Journal of Structural Engineering* | Under Review | 2024 |
-| **_Tran-Van Han_**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee | Biaxial full-scale shaking table test program of innovative wireway vibration attenuation systems | *Journal of Building Engineering* | Under Review | 2024 |
 | **_Tran-Van Han_**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee | Nonlinear static analysis of the frictional effects of 3D pulley-cable systems | *Mechanics Research Communications* | Revision In Process | 2024 |
 
 #### Other Published Papers
@@ -71,9 +79,11 @@ redirect_from:
 
 
 ### Research Experience
+#### Civil and Mechanical Engineering Laboratory (LGCGM), INSA de Rennes, Rennes, France
+- **2024–Present**: Develop the FACILA system
 
 #### Deep Learning Architecture Research Center, Department of Architectural Engineering, Sejong University, Seoul, South Korea
-- **2023–present**: Develop a novel SG thermal break
+- **2023–2024**: Develop a novel SG thermal break
   - Investigates the acoustic performance of a novel thermal break incorporating Ultra-High-Performance Concrete (UHPC) cores and various insulation layers.
   - Advisor: Advisor: [Dr. Kihak Lee](https://sejong.elsevierpure.com/en/persons/kihak-lee/), Professor, Department of Architectural Engineering, Sejong University, Seoul, Korea.
 - **2023–2024**: Develop a novel floating floor for apartments
@@ -97,7 +107,7 @@ redirect_from:
 
 ### Computer Skills
 - **Programming Languages**: Python, MATLAB, PyANSYS
-- **FEA Software**: ANSYS, ABAQUS, Zeus NL, OpenSees, Simcenter 3D
+- **FEA Software**: ANSYS, LS-DYNA, Zeus NL, OpenSees, Simcenter 3D
 
 ### Position of Responsibility
 - **2019–present**: Member of Korean Concrete Society, South Korea
@@ -109,6 +119,11 @@ redirect_from:
 - **2017–2019**: Reinforced Concrete Structures, Department of Civil Engineering, Mientrung University of Civil Engineering
 
 ### Referees
+
+- [Dr. Hugues Somja](https://www.insa-rennes.fr/lgcgm-1.html)
+  - Professor, Director of the GCGM Laboratory and the LGCGM Component at INSA Rennes
+  - Email: [Hugues.Somja@insa-rennes.fr](mailto:Hugues.Somja@insa-rennes.fr)
+  - Phone: 
 
 - [Dr. Kihak Lee](https://sejong.elsevierpure.com/en/persons/kihak-lee/)
   - Professor, Department of Architectural Engineering, Sejong University
