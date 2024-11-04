@@ -21,7 +21,7 @@ redirect_from:
 - **Email:** [tranhan1405@gmail.com](mailto:tranhan1405@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/tranhan1405/)
 - [Google Scholar](https://scholar.google.com/citations?user=FSIZYHkAAAAJ&hl=vi)
-- [Scopus](https://www.scopus.com/authid/detail.uri?authorId=58704744500)
+- [Scopus](https://www.scopus.com/authid/detail.uri?authorId=59274399900)
 - [ORCID](https://orcid.org/0000-0001-7782-0785)
 - [Youtube](https://www.youtube.com/@tranhan1405)
 
