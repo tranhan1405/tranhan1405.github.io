@@ -16,7 +16,7 @@ redirect_from:
   - Earthquake-resistant Structures, Finite Element Analysis, Building Acoustic, Steel Structures, Concrete Structures
 
 ### Contact Information
-- **Address:** [Civil and Mechanical Engineering Laboratory (LGCGM)](https://www.insa-rennes.fr/en/lgcgm.html),  [INSA Rennes](https://www.insa-rennes.fr/index.html), Rennes, France
+- **Address:** [LGCGM Structural Engineering Research Group](https://www.insa-rennes.fr/en/lgcgm.html),  [INSA Rennes](https://www.insa-rennes.fr/index.html), Rennes, France
 - **Mobile:** (+33) 7 65 69 77 61
 - **Email:** [tranhan1405@gmail.com](mailto:tranhan1405@gmail.com)
 - [Linkedin](https://www.linkedin.com/in/tranhan1405/)
