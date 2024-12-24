@@ -36,7 +36,7 @@ redirect_from:
 
 
 ### Publications
-#### Refereed Journal Articles (SCI Journals)
+#### Scopus-Indexed Conferences and SCI Journals
 
 
 | Authors                    | Title                                                                                     | Journal                                | Year |
