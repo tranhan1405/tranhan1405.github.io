@@ -120,7 +120,7 @@ redirect_from:
 ### Referees
 
 - [Dr. Hugues Somja](https://www.insa-rennes.fr/lgcgm-1.html)
-  - Professor, Director of the GCGM Laboratory and the LGCGM Component at INSA Rennes
+  - Professor, Director of the LGCGM Laboratory and the LGCGM Component at INSA Rennes
   - Email: [Hugues.Somja@insa-rennes.fr](mailto:Hugues.Somja@insa-rennes.fr)
   - Phone: 
 
