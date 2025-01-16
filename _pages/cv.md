@@ -128,7 +128,7 @@ redirect_from:
 - [Dr. Hugues Somja](https://www.insa-rennes.fr/lgcgm-1.html)
   - Professor, Director of the LGCGM Laboratory and the LGCGM Component at INSA Rennes
   - Email: [Hugues.Somja@insa-rennes.fr](mailto:Hugues.Somja@insa-rennes.fr)
-  - Phone: 
+  - Phone: + (33) 6 32 31 48 58
 
 - [Dr. Kihak Lee](https://sejong.elsevierpure.com/en/persons/kihak-lee/)
   - Professor, Department of Architectural Engineering, Sejong University
