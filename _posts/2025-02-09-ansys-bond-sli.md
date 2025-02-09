@@ -55,7 +55,8 @@ OUTRES,all,all
   </div>
 
 Plot crack:
-<pre><code class="language-apdl">
+<div style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+  <pre><code>
 !Change from black background to white background
 /RGB,INDEX,100,100,100, 0   
 /RGB,INDEX, 80, 80, 80,13   
@@ -78,6 +79,8 @@ PLCRACK,0,0 !PLCRACK, LOC, NUM
                  !1 - Plot only the first crack.
                  !2 - Plot only the second crack
                  !3 - Plot only the third crack.
-</code></pre>
+ </code></pre>
+  </div>
+
 
 
