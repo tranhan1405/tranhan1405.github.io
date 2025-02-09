@@ -15,9 +15,8 @@ To capture the **bond-slip behavior** between the rebar and concrete, **COMBINE3
 
 I demonstrate the finite element (FE) results in the YouTube video.
 For further details, refer to this research paper and download the tutorial via the provided link:
+
 Paper: [Experimental and numerical study of bond between masonry and near-surface mounted steel bars](https://doi.org/10.1016/j.cscm.2020.e00468)
-
-
 
 Tutorial download:
 
