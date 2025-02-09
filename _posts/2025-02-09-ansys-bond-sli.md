@@ -15,8 +15,10 @@ To capture the **bond-slip behavior** between the rebar and concrete, **COMBINE3
 
 I demonstrate the finite element (FE) results in the YouTube video.
 For further details, refer to this research paper and download the tutorial via the provided link:
-Paper: 
+Paper: https://doi.org/10.1016/j.cscm.2020.e00468
+
 Tutorial download:
+
 ## YouTube Video
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZBKRe3CBitc?si=YmkkEf5XB2Ak4naL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
