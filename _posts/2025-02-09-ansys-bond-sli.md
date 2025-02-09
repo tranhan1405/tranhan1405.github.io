@@ -23,6 +23,7 @@ Tutorial download:
 
 APDL code
 Define SOLID65 APLD code:
+<pre><code class="language-apdl">
 /prep7
 
 ET,SOLID65_MATID,SOLID65
@@ -48,7 +49,7 @@ TBPT,,1.00000,3.85000
 
 /SOLU
 OUTRES,all,all
-
+</code></pre>
 
 Plot crack:
 <pre><code class="language-apdl">
