@@ -51,6 +51,7 @@ OUTRES,all,all
 
 
 Plot crack:
+<pre><code class="language-apdl">
 !Change from black background to white background
 /RGB,INDEX,100,100,100, 0   
 /RGB,INDEX, 80, 80, 80,13   
@@ -73,6 +74,6 @@ PLCRACK,0,0 !PLCRACK, LOC, NUM
                  !1 - Plot only the first crack.
                  !2 - Plot only the second crack
                  !3 - Plot only the third crack.
-
+</code></pre>
 
 
