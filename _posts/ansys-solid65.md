@@ -1,4 +1,3 @@
-Here's the complete document in Markdown format for your blog:
 ---
 title: "Concrete Material Modeling and ANSYS Implementation Using SOLID65 Elements"
 date: 2025-02-27
