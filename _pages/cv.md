@@ -45,7 +45,6 @@ redirect_from:
 | Authors                    | Title                                                                                     | Journal                                | Year |
 |--------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------|-----------|
 | **Tran-Van Han**, Gayoon Lee, Yun-Seong Shin, Sungwoo Woo, Kihak Lee                | Experimental and numerical study of the acoustic performance of a novel composite core thermal break | *Case Studies in Construction Materials, e04543*| 2025 |
-
 | **Tran-Van Han**, Gayoon Lee, Sang Whan Han, Tae-Sang An, Chan-Yu Jeong, Kihak Lee                | Vibro-acoustic testing on impact sound performance of novel floating floor systems with polyurethane cushions | *Journal of Building Engineering, 100*, 111720 | 2025 |
 | **Tran-Van Han**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen Huu Cuong, Kihak Lee  | Experimental and Numerical Evaluation of the Structural Performance of Novel S-CN Connections in Modular Construction | *Structures, 71*, 107930 | 2025 |
 | **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Kihak Lee | Biaxial full-scale shaking table test program of innovative wireway vibration attenuation systems | *Journal of Building Engineering, 97*, 110792 | 2024 |
@@ -63,7 +62,6 @@ redirect_from:
 
 | Authors                                                                                         | Title                                                                                                               | Journal                               | Status                | Year |
 |-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------------------|------|
-
 | **Tran-Van Han**, Gayoon Lee, Sang Whan Han, Tae-Sang An, Chan-Yu Jeong, Kihak Lee                | Experimental and Numerical Study of Novel Floating Floors with Tunnel-Shaped Rubber Cushions for Heavy Impact Sound Reduction | *Journal of Building Engineering* | Under Review              | 2024 |
 | **Tran-Van Han**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Tra Ngoc Sanh, Kihak Lee              | Experimental and Analytical Studies on the Compressive Behaviors of a 3D-Printed Sand Mold-Cast S-CN Connector in Modular Steel Buildings | *Journal of Structural Engineering* | Under Review          | 2024 |
 | **Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee                           | Nonlinear static analysis of the frictional effects of 3D pulley-cable systems                                     | *Mechanics Research Communications*   | Revision In Process   | 2024 |
