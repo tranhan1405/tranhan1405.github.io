@@ -69,21 +69,23 @@ redirect_from:
 
 #### Other Published Papers
 
-| Authors | Title | Conference | Year |
-|---------|-------|------------|------|
-| **_Tran-Van Han_**, Kihak Lee | Performance evaluation of novel DfMA connection nodes of modular Buildings | *Proceedings of the 8th Structural Engineers World Congress*, Seoul | 2023 |
-| **_Tran-Van Han_**, Kihak Lee | Parametric Study and Finite Element Analysis of S-CN Connections in Steel Modular Structures | *Proceedings of Korean Concrete Society Conference*, 35(2), 153-154 | 2023 |
-| Nguyen Cong Duc, Marek Salamak, Andrzej Katunin, Quoc Bao Pham, **_Tran-Van Han_**, Phan Van Hue, and Pham Ngoc Tien | A Review of AI-Integrated Structural Health Monitoring Approaches for Prediction Models of Structural Behavior of Civil Infrastructure Under Weather Events | *Proceedings of the 26th National Conference on Fluid Mechanics*, 148-154 | 2023 |
-| **_Tran-Van Han_**, Tra Ngoc Sanh, Kihak Lee | Numerical Investigation of Novel DfMA Modular Building Connecting Nodes to Improve Constructability and Safety | *Proceedings of Korean Concrete Society Conference*, 35 (1), 171-172 | 2023 |
-| **_Tran-Van Han_**, Kihak Lee | Vibro-Acoustic Numerical Simulation for Floor Noise Analysis of an Apartment Building with Floating Floors | *Proceedings of Korean Concrete Society Conference*, 34 (2), 189-190 | 2022 |
-| **_Tran-Van Han_**, Jiuk Shin, Kihak Lee | Experimental Study of an Innovative Wireway Vibration Attenuation System with a Pulley Friction Damper | *Proceedings of Korean Concrete Society Conference*, 34 (1), 89-90 | 2022 |
-| **_Tran-Van Han_**, Jiuk Shin, Kihak Lee | Tri-axial Shaking Table Tests for Seismic Performance Evaluation of Pulley-wireway System | *Proceedings of Korean Concrete Society Conference*, 33 (2), 111-112 | 2021 |
-| **_Han V Tran_**, Jiuk Shin, Kihak Lee | Experiment and Numerical Simulation of the Wireway System with Pulley under Lateral Seismic Excitation | *Proceedings of Korean Concrete Society Conference*, 33 (1), 103-104 | 2021 |
-| **_Han V Tran_**, Kihak Lee | Numerical Simulation of Masonry Behaviour Strengthened with Polyethylene Membrane using Coupled Damage–Plasticity Microplane Model | *Proceedings of Korean Concrete Society Conference*, 32 (2), 145-146 | 2020 |
-| **_Tran-Van Han_**, Jin Su Min, Sung Chan Kim, Cha Ji Hyun, Jiuk Shin, Kihak Lee |Seismic Performance Evaluation of Vibration Attenuation Wireway-Pulley System Using the FE Analysis | *Journal of Korean Association for Spatial Structures*, 20(4), 185-192. | 2020 |
-| **_Han V Tran_**, Kihak Lee | Numerical evaluation of piloti-type reinforced concrete building retrofitted with buckling restrained brace configurations subjected to successive earthquakes | *Proceedings of Korean Concrete Society Conference*, 31 (2), 153-154 | 2019 |
-| Huynh Quoc Hung, Le Van Dong, **_Tran-Van Han_**, Nguyen Cong Duc | Technology approach for manufacturing of soil-cement bricks in rural countrysides of Vietnam | *Vietnam Journal of Construction*, 82-84 | 9/2018 |
-| D Nguyen, H Hung, **_Tran-Van Han_**, T Mot, N Cong Minh, T Pham, N Kieu Nhi | Development and Application of Structural Health Monitoring Using Low-Cost MEMS and Arduino Nano Microcontroller Board | *Vietnam Journal of Construction*, 154-158 | 9/2018 |
+| Authors | Title | Conference / Journal | Year |
+|----------|--------|----------------------|------|
+| Alice Le Berder, **_Van Han Tran_**, Tuan-Anh Nguyen, Clémence Lepourry-Nicollet, Hugues Somja | Experimental and Analytical Study on Anchorage Performance of a New Fastening System for Wood-Frame Façade | *Proceedings of the fib Symposium 2025*, Antibes, France | 2025 |
+| **_Tran-Van Han_**, Kihak Lee | Performance Evaluation of Novel DfMA Connection Nodes of Modular Buildings | *Proceedings of the 8th Structural Engineers World Congress*, Seoul | 2023 |
+| **_Tran-Van Han_**, Kihak Lee | Parametric Study and Finite Element Analysis of S-CN Connections in Steel Modular Structures | *Proceedings of the Korean Concrete Society Conference*, 35(2), 153–154 | 2023 |
+| Nguyen Cong Duc, Marek Salamak, Andrzej Katunin, Quoc Bao Pham, **_Tran-Van Han_**, Phan Van Hue, Pham Ngoc Tien | A Review of AI-Integrated Structural Health Monitoring Approaches for Prediction Models of Structural Behavior of Civil Infrastructure Under Weather Events | *Proceedings of the 26th National Conference on Fluid Mechanics*, 148–154 | 2023 |
+| **_Tran-Van Han_**, Tra Ngoc Sanh, Kihak Lee | Numerical Investigation of Novel DfMA Modular Building Connecting Nodes to Improve Constructability and Safety | *Proceedings of the Korean Concrete Society Conference*, 35(1), 171–172 | 2023 |
+| **_Tran-Van Han_**, Kihak Lee | Vibro-Acoustic Numerical Simulation for Floor Noise Analysis of an Apartment Building with Floating Floors | *Proceedings of the Korean Concrete Society Conference*, 34(2), 189–190 | 2022 |
+| **_Tran-Van Han_**, Jiuk Shin, Kihak Lee | Experimental Study of an Innovative Wireway Vibration Attenuation System with a Pulley Friction Damper | *Proceedings of the Korean Concrete Society Conference*, 34(1), 89–90 | 2022 |
+| **_Tran-Van Han_**, Jiuk Shin, Kihak Lee | Tri-Axial Shaking Table Tests for Seismic Performance Evaluation of Pulley-Wireway System | *Proceedings of the Korean Concrete Society Conference*, 33(2), 111–112 | 2021 |
+| **_Han V. Tran_**, Jiuk Shin, Kihak Lee | Experiment and Numerical Simulation of the Wireway System with Pulley Under Lateral Seismic Excitation | *Proceedings of the Korean Concrete Society Conference*, 33(1), 103–104 | 2021 |
+| **_Han V. Tran_**, Kihak Lee | Numerical Simulation of Masonry Behaviour Strengthened with Polyethylene Membrane Using Coupled Damage–Plasticity Microplane Model | *Proceedings of the Korean Concrete Society Conference*, 32(2), 145–146 | 2020 |
+| **_Tran-Van Han_**, Jin Su Min, Sung Chan Kim, Cha Ji Hyun, Jiuk Shin, Kihak Lee | Seismic Performance Evaluation of Vibration Attenuation Wireway–Pulley System Using the FE Analysis | *Journal of Korean Association for Spatial Structures*, 20(4), 185–192 | 2020 |
+| **_Han V. Tran_**, Kihak Lee | Numerical Evaluation of Piloti-Type Reinforced Concrete Building Retrofitted with Buckling Restrained Brace Configurations Subjected to Successive Earthquakes | *Proceedings of the Korean Concrete Society Conference*, 31(2), 153–154 | 2019 |
+| Huynh Quoc Hung, Le Van Dong, **_Tran-Van Han_**, Nguyen Cong Duc | Technology Approach for Manufacturing of Soil–Cement Bricks in Rural Countrysides of Vietnam | *Vietnam Journal of Construction*, 82–84 | 2018 |
+| D. Nguyen, H. Hung, **_Tran-Van Han_**, T. Mot, N. Cong Minh, T. Pham, N. Kieu Nhi | Development and Application of Structural Health Monitoring Using Low-Cost MEMS and Arduino Nano Microcontroller Board | *Vietnam Journal of Construction*, 154–158 | 2018 |
+
 
 
 ### Research Experience
