@@ -3,7 +3,7 @@ title: "Experimental and Analytical Study on Anchorage Performance of a New Fast
 collection: publications
 permalink: /publication/anchorage-performance-wood-frame-facade
 excerpt: "An experimental and analytical investigation on a newly developed fastening system for wood-frame façades, providing insights into anchorage behavior and design optimization."
-date: 2025-02-10
+date: 2025-06-18
 venue: "fib Symposium 2025, Antibes, France"
 paperurl: "http://tranhan1405.github.io/files/Experimental_and_analytical_study_on_anchorage_performance.pdf"
 citation: "Alice Le Berder, Van Han Tran, Tuan-Anh Nguyen, Clémence Lepourry-Nicollet, and Hugues Somja (2025, February). *Experimental and Analytical Study on Anchorage Performance of a New Fastening System for Wood-Frame Façade.* In *Proceedings of the fib Symposium 2025*, Antibes, France."
