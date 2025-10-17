@@ -5,7 +5,7 @@ permalink: /publication/anchorage-performance-wood-frame-facade
 excerpt: "This study investigates the anchorage performance of a newly developed fastening system for wood-frame façades through experimental tests and analytical modeling, providing insights into design optimization and safety assessment."
 date: 2025-06-18
 venue: "fib Symposium 2025, Antibes, France"
-paperurl: "http://tranhan1405.github.io/files/---
+paperurl: "http://tranhan1405.github.io/files/Experimental_and_analytical_study_on_anchorage_performance.pdf"
 title: "Experimental and Analytical Study on Anchorage Performance of a New Fastening System for Wood-Frame Façade"
 collection: publications
 permalink: /publication/Experimental_and_analytical_study_on_anchorage_performance
