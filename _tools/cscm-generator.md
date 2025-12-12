@@ -208,13 +208,13 @@ date: 2024-12-12
             <div class="glass" style="border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
                 <h2 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">Quick Presets</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem;">
-                    <button class="preset-btn" onclick="loadPreset(event, 20, 16)">C20/25</button>
-                    <button class="preset-btn" onclick="loadPreset(event, 25, 16)">C25/30</button>
-                    <button class="preset-btn" onclick="loadPreset(event, 30, 16)">C30/37</button>
-                    <button class="preset-btn" onclick="loadPreset(event, 35, 20)">C35/45</button>
-                    <button class="preset-btn" onclick="loadPreset(event, 40, 20)">C40/50</button>
-                    <button class="preset-btn" onclick="loadPreset(event, 45, 20)">C45/55</button>
-                    <button class="preset-btn" onclick="loadPreset(event, 50, 25)">C50/60</button>
+                    <button class="preset-btn" data-fc="20" data-dmax="16">C20/25</button>
+                    <button class="preset-btn" data-fc="25" data-dmax="16">C25/30</button>
+                    <button class="preset-btn" data-fc="30" data-dmax="16">C30/37</button>
+                    <button class="preset-btn" data-fc="35" data-dmax="20">C35/45</button>
+                    <button class="preset-btn" data-fc="40" data-dmax="20">C40/50</button>
+                    <button class="preset-btn" data-fc="45" data-dmax="20">C45/55</button>
+                    <button class="preset-btn" data-fc="50" data-dmax="25">C50/60</button>
                 </div>
                 <p style="color: #93c5fd; font-size: 0.875rem; margin-top: 1rem;">
                     ℹ️ Presets use Eurocode 2 concrete grades. Input is <strong>f<sub>ck</sub></strong> (cylinder), e.g. C30/37 → f<sub>ck</sub> = 30 MPa.
@@ -238,7 +238,6 @@ date: 2024-12-12
                             class="cscm-input"
                             placeholder="Enter fck in MPa, e.g. 30 for C30/37"
                             step="0.1"
-                            oninput="validateInputs()"
                         />
                         <p class="error-message" id="fc-error">⚠️ f<sub>ck</sub> must be between 10–100 MPa</p>
                         <p class="warning-message" id="fc-warning">⚠️ Values outside 20–80 MPa range may have reduced accuracy</p>
@@ -258,7 +257,6 @@ date: 2024-12-12
                             class="cscm-input"
                             placeholder="Enter dmax in mm"
                             step="1"
-                            oninput="validateInputs()"
                         />
                         <p class="error-message" id="dmax-error">⚠️ Aggregate size must be between 4–40 mm</p>
                         <p class="warning-message" id="dmax-warning">⚠️ Common sizes: 8, 16, 20, 25, 32 mm</p>
@@ -267,7 +265,7 @@ date: 2024-12-12
                         </p>
                     </div>
 
-                    <button onclick="generateKFile()" class="btn-generate" id="generate-btn">
+                    <button class="btn-generate" id="generate-btn">
                         Generate Material File
                     </button>
                 </div>
@@ -277,7 +275,7 @@ date: 2024-12-12
             <div id="results" class="glass" style="border-radius: 1rem; padding: 2rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); display: none;">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
                     <h2 style="font-size: 1.5rem; font-weight: 600; color: white;">Generated File</h2>
-                    <button onclick="downloadFile()" class="btn-download">
+                    <button class="btn-download" id="download-btn">
                         <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                         </svg>
@@ -339,7 +337,7 @@ date: 2024-12-12
             <div class="glass" style="border-radius: 1rem; padding: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: sticky; top: 2rem;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                     <h3 style="color: white; font-weight: 600; font-size: 1.25rem;">History</h3>
-                    <button class="clear-history" onclick="clearHistory()" id="clear-btn" style="display: none;">Clear</button>
+                    <button class="clear-history" id="clear-btn" style="display: none;">Clear</button>
                 </div>
                 <div id="history-list" style="max-height: 600px; overflow-y: auto;">
                     <p style="color: #93c5fd; font-size: 0.875rem; text-align: center; padding: 2rem 0;">No history yet. Generate your first file!</p>
@@ -406,20 +404,22 @@ date: 2024-12-12
             }
         }
 
-        document.getElementById('generate-btn').disabled = !isValid;
+        const genBtn = document.getElementById('generate-btn');
+        if (genBtn) genBtn.disabled = !isValid;
         return isValid;
     }
 
     // ====== Presets ======
-    function loadPreset(e, fc, dmax) {
+    function loadPreset(fc, dmax, btn) {
         document.getElementById('fc').value = fc;
         document.getElementById('dmax').value = dmax;
         validateInputs();
 
-        document.querySelectorAll('.preset-btn').forEach(btn => btn.classList.remove('active'));
-        const target = e.currentTarget || e.target;
-        target.classList.add('active');
-        setTimeout(() => target.classList.remove('active'), 800);
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        if (btn) {
+            btn.classList.add('active');
+            setTimeout(() => btn.classList.remove('active'), 800);
+        }
     }
 
     // ====== Calculation functions (mirror Python) ======
@@ -438,8 +438,7 @@ date: 2024-12-12
         const fcm = fc + deltaF;
         const fcm0 = 10;
         const nu = 0.2;
-        // Fix: fcm = fck + 8, chỉ cộng 1 lần
-        const E = Ec0 * Math.pow(fcm / fcm0, 1/3);
+        const E = Ec0 * Math.pow(fcm / fcm0, 1/3); // fcm = fck + 8
         const G = E / (2 * (1 + nu));
         const K = E / (3 * (1 - 2 * nu));
         return { G, K };
@@ -483,7 +482,7 @@ date: 2024-12-12
         return { R, XD };
     }
 
-    // ====== History with localStorage (sync, đơn giản) ======
+    // ====== History with localStorage ======
     function getHistory() {
         try {
             const raw = localStorage.getItem(HISTORY_KEY);
@@ -539,7 +538,7 @@ date: 2024-12-12
                 minute: '2-digit'
             });
             return `
-                <div class="history-item" onclick="loadFromHistory(${index})">
+                <div class="history-item" data-index="${index}">
                     <div class="history-time">${timeStr}</div>
                     <div class="history-params">fck=${entry.fc} MPa, dmax=${entry.dmax} mm</div>
                 </div>
@@ -712,9 +711,43 @@ date: 2024-12-12
         URL.revokeObjectURL(url);
     }
 
-    // ====== Init on load ======
+    // ====== Init on load: gắn event listeners ======
     window.addEventListener('load', function () {
         validateInputs();
         renderHistory();
+
+        const genBtn = document.getElementById('generate-btn');
+        const dlBtn = document.getElementById('download-btn');
+        const clearBtn = document.getElementById('clear-btn');
+
+        if (genBtn) genBtn.addEventListener('click', generateKFile);
+        if (dlBtn) dlBtn.addEventListener('click', downloadFile);
+        if (clearBtn) clearBtn.addEventListener('click', clearHistory);
+
+        // Preset buttons
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const fc = parseFloat(this.dataset.fc);
+                const dmax = parseFloat(this.dataset.dmax);
+                loadPreset(fc, dmax, this);
+            });
+        });
+
+        // Input listeners for live validation
+        const fcEl = document.getElementById('fc');
+        const dmaxEl = document.getElementById('dmax');
+        if (fcEl) fcEl.addEventListener('input', validateInputs);
+        if (dmaxEl) dmaxEl.addEventListener('input', validateInputs);
+
+        // History click via delegation
+        const historyList = document.getElementById('history-list');
+        if (historyList) {
+            historyList.addEventListener('click', function (e) {
+                const item = e.target.closest('.history-item');
+                if (!item) return;
+                const idx = parseInt(item.dataset.index, 10);
+                if (!isNaN(idx)) loadFromHistory(idx);
+            });
+        }
     });
 </script>
