@@ -11,7 +11,10 @@ main:
     
   - title: "Portfolio"
     url: /portfolio/
-        
+
+   - title: "Tools"         
+    url: /tools/            
+    
   - title: "Blog Posts"
     url: /year-archive/
     
@@ -20,3 +23,4 @@ main:
     
   - title: "Guide"
     url: /markdown/
+
