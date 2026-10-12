@@ -6,349 +6,152 @@ permalink: /tools/cscm-generator/
 date: 2024-12-12
 ---
 
+A small helper I use to write `*MAT_CSCM_TITLE` cards for LS-DYNA. Give it the characteristic strength of the concrete and the maximum aggregate size; it computes the elastic, fracture and rate parameters and writes a keyword file you can include in a model. Units are mm, ms, g, MPa (density 0.0023 g/mm³).
+
 <style>
-    .cscm-container {
-        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
-        background-color: #0f172a;
-        min-height: 100vh;
-        padding: 2rem;
-        margin: -2rem -2rem -2rem -2rem;
-        box-sizing: border-box;
+    .cscm { margin: 1.5em 0; }
+    .cscm fieldset {
+        border: 1px solid #ddd;
+        padding: 1em 1.25em 0.75em;
+        margin: 0 0 1.5em;
     }
-    .glass {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+    .cscm legend {
+        font-weight: bold;
+        padding: 0 0.4em;
+        width: auto;
+        border: 0;
+        margin: 0;
+    }
+    .cscm label {
+        display: block;
+        font-weight: bold;
+        font-size: 0.9em;
+        margin: 0.75em 0 0.25em;
     }
     .cscm-input {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        border-radius: 0.5rem;
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: white;
-        font-size: 1.125rem;
-        box-sizing: border-box;
+        width: 10em;
+        padding: 0.3em 0.5em;
+        font-size: 1em;
+        border: 1px solid #bbb;
+        border-radius: 2px;
     }
-    .cscm-input:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px #60a5fa;
+    .cscm-input.error { border-color: #b00020; }
+    .cscm .hint {
+        font-size: 0.8em;
+        color: #666;
+        margin: 0.25em 0 0;
     }
-    .cscm-input::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-    }
-    .cscm-input.error {
-        border-color: #ef4444;
-        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
-    }
-    .error-message {
-        color: #fca5a5;
-        font-size: 0.875rem;
-        margin-top: 0.5rem;
+    .error-message, .warning-message {
         display: none;
+        font-size: 0.8em;
+        margin: 0.25em 0 0;
     }
-    .error-message.show {
-        display: block;
-    }
-    .warning-message {
-        color: #fcd34d;
-        font-size: 0.875rem;
-        margin-top: 0.5rem;
-        display: none;
-    }
-    .warning-message.show {
-        display: block;
-    }
-    .btn-generate {
-        width: 100%;
-        background: linear-gradient(to right, #3b82f6, #2563eb);
-        color: white;
-        font-weight: 600;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border: none;
-        font-size: 1.125rem;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    .btn-generate:hover:not(:disabled) {
-        background: linear-gradient(to right, #2563eb, #1d4ed8);
-        transform: scale(1.02);
-    }
-    .btn-generate:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
-    .btn-download {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: #10b981;
-        color: white;
-        font-weight: 600;
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        border: none;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    .btn-download:hover {
-        background: #059669;
-    }
+    .error-message { color: #b00020; }
+    .warning-message { color: #8a6100; }
+    .error-message.show, .warning-message.show { display: block; }
     .preset-btn {
-        padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        font-weight: 600;
+        font-size: 0.85em;
+        padding: 0.25em 0.6em;
+        margin: 0 0.3em 0.4em 0;
+        background: #fff;
+        border: 1px solid #bbb;
+        border-radius: 2px;
         cursor: pointer;
-        transition: all 0.3s;
     }
-    .preset-btn:hover {
-        background: rgba(255, 255, 255, 0.2);
-        border-color: #60a5fa;
-        transform: translateY(-2px);
-    }
-    .preset-btn.active {
-        background: #3b82f6;
-        border-color: #3b82f6;
-    }
-    .history-item {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 0.5rem;
-        padding: 1rem;
-        margin-bottom: 0.75rem;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    .history-item:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: #60a5fa;
-    }
-    .history-time {
-        color: #93c5fd;
-        font-size: 0.75rem;
-    }
-    .history-params {
-        color: white;
-        font-weight: 600;
-        margin-top: 0.25rem;
-    }
-    .param-card {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 0.5rem;
-        padding: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .param-label {
-        color: #93c5fd;
-        font-size: 0.875rem;
-        margin-bottom: 0.25rem;
-    }
-    .param-value {
-        color: white;
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-    .preview-box {
-        background: rgba(15, 23, 42, 0.7);
-        border-radius: 0.5rem;
-        padding: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        max-height: 16rem;
-        overflow-y: auto;
-    }
-    .preview-text {
-        color: #86efac;
-        font-size: 0.75rem;
-        font-family: monospace;
+    .preset-btn:hover, .preset-btn.active { border-color: #333; background: #f3f3f3; }
+    .cscm .actions { margin-top: 1em; }
+    #generate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .cscm table.params { font-size: 0.9em; margin: 0.75em 0; }
+    .cscm table.params td:last-child { text-align: right; font-family: Monaco, Consolas, "Lucida Console", monospace; }
+    .cscm pre#preview {
+        font-size: 0.7em;
+        line-height: 1.35;
+        max-height: 22em;
+        overflow: auto;
         white-space: pre;
-        overflow-x: auto;
     }
-    .clear-history {
-        background: rgba(239, 68, 68, 0.2);
-        border: 1px solid rgba(239, 68, 68, 0.4);
-        color: #fca5a5;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 0.875rem;
+    #history-list { font-size: 0.85em; margin: 0.5em 0 0; padding-left: 1.2em; }
+    .history-item { cursor: pointer; color: #52adc8; margin-bottom: 0.2em; }
+    .history-item:hover { text-decoration: underline; }
+    .history-time { color: #888; margin-left: 0.5em; }
+    #clear-btn {
+        font-size: 0.8em;
+        background: none;
+        border: 0;
+        padding: 0;
+        color: #888;
+        text-decoration: underline;
         cursor: pointer;
-        transition: all 0.3s;
-    }
-    .clear-history:hover {
-        background: rgba(239, 68, 68, 0.3);
-    }
-    @media (max-width: 768px) {
-        .cscm-container {
-            padding: 1rem;
-            margin: -1rem;
-        }
     }
 </style>
 
-<div class="cscm-container">
-    <div style="max-width: 80rem; margin: 0 auto; display: grid; grid-template-columns: 1fr 300px; gap: 1.5rem;">
-        
-        <!-- Main Content -->
+<div class="cscm">
+    <fieldset>
+        <legend>Input</legend>
+
+        <label>Eurocode 2 grade (optional shortcut)</label>
         <div>
-            <!-- Header -->
-            <div class="glass" style="border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
-                    <svg style="width: 2.5rem; height: 2.5rem; color: #60a5fa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                    </svg>
-                    <h1 style="font-size: 2.25rem; font-weight: 700; color: white;">LS-DYNA CSCM</h1>
-                </div>
-                <p style="color: #93c5fd; font-size: 1.125rem;">Material Model Generator Pro</p>
-            </div>
-
-            <!-- Presets -->
-            <div class="glass" style="border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
-                <h2 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1rem;">Quick Presets</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem;">
-                    <button class="preset-btn" data-fc="20" data-dmax="16">C20/25</button>
-                    <button class="preset-btn" data-fc="25" data-dmax="16">C25/30</button>
-                    <button class="preset-btn" data-fc="30" data-dmax="16">C30/37</button>
-                    <button class="preset-btn" data-fc="35" data-dmax="20">C35/45</button>
-                    <button class="preset-btn" data-fc="40" data-dmax="20">C40/50</button>
-                    <button class="preset-btn" data-fc="45" data-dmax="20">C45/55</button>
-                    <button class="preset-btn" data-fc="50" data-dmax="25">C50/60</button>
-                </div>
-                <p style="color: #93c5fd; font-size: 0.875rem; margin-top: 1rem;">
-                    ℹ️ Presets use Eurocode 2 concrete grades. Input is <strong>f<sub>ck</sub></strong> (cylinder), e.g. C30/37 → f<sub>ck</sub> = 30 MPa.
-                    Internally: f<sub>cm</sub> = f<sub>ck</sub> + 8 MPa.
-                </p>
-            </div>
-
-            <!-- Input Form -->
-            <div class="glass" style="border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
-                <h2 style="font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 1.5rem;">Custom Parameters</h2>
-                
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <div>
-                        <label style="display: block; color: white; margin-bottom: 0.5rem; font-size: 1.125rem; font-weight: 500;">
-                            Characteristic compressive strength f<sub>ck</sub> [MPa] *
-                        </label>
-                        <input
-                            type="number"
-                            id="fc"
-                            value="30"
-                            class="cscm-input"
-                            placeholder="Enter fck in MPa, e.g. 30 for C30/37"
-                            step="0.1"
-                        />
-                        <p class="error-message" id="fc-error">⚠️ f<sub>ck</sub> must be between 10–100 MPa</p>
-                        <p class="warning-message" id="fc-warning">⚠️ Values outside 20–80 MPa range may have reduced accuracy</p>
-                        <p style="color: #93c5fd; font-size: 0.875rem; margin-top: 0.5rem;">
-                            Typical f<sub>ck</sub> range: 20–80 MPa (e.g. C30/37 → 30 MPa)
-                        </p>
-                    </div>
-
-                    <div>
-                        <label style="display: block; color: white; margin-bottom: 0.5rem; font-size: 1.125rem; font-weight: 500;">
-                            Maximum aggregate size d<sub>max</sub> [mm] *
-                        </label>
-                        <input
-                            type="number"
-                            id="dmax"
-                            value="16"
-                            class="cscm-input"
-                            placeholder="Enter dmax in mm"
-                            step="1"
-                        />
-                        <p class="error-message" id="dmax-error">⚠️ Aggregate size must be between 4–40 mm</p>
-                        <p class="warning-message" id="dmax-warning">⚠️ Common sizes: 8, 16, 20, 25, 32 mm</p>
-                        <p style="color: #93c5fd; font-size: 0.875rem; margin-top: 0.5rem;">
-                            Standard sizes: 8, 16, 20, 25, 32 mm (default: 16 mm)
-                        </p>
-                    </div>
-
-                    <button class="btn-generate" id="generate-btn">
-                        Generate Material File
-                    </button>
-                </div>
-            </div>
-
-            <!-- Results -->
-            <div id="results" class="glass" style="border-radius: 1rem; padding: 2rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); display: none;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-                    <h2 style="font-size: 1.5rem; font-weight: 600; color: white;">Generated File</h2>
-                    <button class="btn-download" id="download-btn">
-                        <svg style="width: 1.25rem; height: 1.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                        Download .k File
-                    </button>
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.5); border-radius: 0.5rem; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1);">
-                    <p id="filename" style="color: #93c5fd; font-family: monospace; font-size: 0.875rem;"></p>
-                </div>
-
-                <!-- Key Parameters -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                    <div class="param-card">
-                        <p class="param-label">Shear Modulus G [MPa]</p>
-                        <p id="param-g" class="param-value"></p>
-                    </div>
-                    <div class="param-card">
-                        <p class="param-label">Bulk Modulus K [MPa]</p>
-                        <p id="param-k" class="param-value"></p>
-                    </div>
-                    <div class="param-card">
-                        <p class="param-label">Fracture Energy G<sub>F</sub> [N/m]</p>
-                        <p id="param-gf" class="param-value"></p>
-                    </div>
-                    <div class="param-card">
-                        <p class="param-label">Alpha Parameter</p>
-                        <p id="param-alpha" class="param-value"></p>
-                    </div>
-                </div>
-
-                <!-- File Preview -->
-                <div class="preview-box">
-                    <p style="color: #93c5fd; font-size: 0.875rem; margin-bottom: 0.5rem; font-weight: 600;">File Preview:</p>
-                    <pre id="preview" class="preview-text"></pre>
-                </div>
-            </div>
-
-            <!-- Info Box -->
-            <div style="background: rgba(59, 130, 246, 0.1); backdrop-filter: blur(10px); border-radius: 1rem; padding: 1.5rem; margin-top: 1.5rem; border: 1px solid rgba(96, 165, 250, 0.3);">
-                <div style="display: flex; align-items: start; gap: 0.75rem;">
-                    <svg style="width: 1.5rem; height: 1.5rem; color: #60a5fa; flex-shrink: 0; margin-top: 0.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <div>
-                        <h3 style="color: white; font-weight: 600; margin-bottom: 0.5rem;">About CSCM Material Model</h3>
-                        <p style="color: #93c5fd; font-size: 0.875rem; line-height: 1.6;">
-                            The Continuous Surface Cap Model (CSCM) in LS-DYNA is used to simulate concrete and rock materials under complex stress states.
-                            This tool uses Eurocode 2-based relationships: you provide f<sub>ck</sub> and d<sub>max</sub>, and it automatically generates a
-                            *MAT_CSCM_TITLE card with consistent G, K, fracture energy and rate parameters.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <button class="preset-btn" data-fc="20" data-dmax="16">C20/25</button>
+            <button class="preset-btn" data-fc="25" data-dmax="16">C25/30</button>
+            <button class="preset-btn" data-fc="30" data-dmax="16">C30/37</button>
+            <button class="preset-btn" data-fc="35" data-dmax="20">C35/45</button>
+            <button class="preset-btn" data-fc="40" data-dmax="20">C40/50</button>
+            <button class="preset-btn" data-fc="45" data-dmax="20">C45/55</button>
+            <button class="preset-btn" data-fc="50" data-dmax="25">C50/60</button>
         </div>
 
-        <!-- History Sidebar -->
-        <div>
-            <div class="glass" style="border-radius: 1rem; padding: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: sticky; top: 2rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3 style="color: white; font-weight: 600; font-size: 1.25rem;">History</h3>
-                    <button class="clear-history" id="clear-btn" style="display: none;">Clear</button>
-                </div>
-                <div id="history-list" style="max-height: 600px; overflow-y: auto;">
-                    <p style="color: #93c5fd; font-size: 0.875rem; text-align: center; padding: 2rem 0;">No history yet. Generate your first file!</p>
-                </div>
-            </div>
+        <label for="fc">f<sub>ck</sub>, characteristic cylinder strength [MPa]</label>
+        <input type="number" id="fc" value="30" class="cscm-input" step="0.1" />
+        <p class="error-message" id="fc-error">f<sub>ck</sub> must be between 10 and 100 MPa.</p>
+        <p class="warning-message" id="fc-warning">Outside 20–80 MPa the fitted parameters are extrapolated.</p>
+        <p class="hint">e.g. C30/37 &rarr; 30 MPa. The mean strength is taken as f<sub>cm</sub> = f<sub>ck</sub> + 8 MPa.</p>
+
+        <label for="dmax">d<sub>max</sub>, maximum aggregate size [mm]</label>
+        <input type="number" id="dmax" value="16" class="cscm-input" step="1" />
+        <p class="error-message" id="dmax-error">d<sub>max</sub> must be between 4 and 40 mm.</p>
+        <p class="warning-message" id="dmax-warning">Not a standard size (8, 16, 20, 25, 32 mm).</p>
+
+        <div class="actions">
+            <button class="btn btn--primary" id="generate-btn">Generate .k file</button>
         </div>
+    </fieldset>
+
+    <div id="results" style="display: none;">
+        <h3>Output: <code id="filename"></code></h3>
+
+        <table class="params">
+            <tbody>
+                <tr><td>Shear modulus G [MPa]</td><td id="param-g"></td></tr>
+                <tr><td>Bulk modulus K [MPa]</td><td id="param-k"></td></tr>
+                <tr><td>Fracture energy G<sub>F</sub> [N/mm]</td><td id="param-gf"></td></tr>
+                <tr><td>&alpha; (TXC surface)</td><td id="param-alpha"></td></tr>
+            </tbody>
+        </table>
+
+        <pre id="preview"></pre>
+
+        <p><button class="btn" id="download-btn">Download .k file</button></p>
     </div>
+
+    <p style="margin-bottom: 0;"><strong>Recently generated</strong> <button id="clear-btn" style="display: none;">clear</button></p>
+    <div id="history-list"><p class="hint">Nothing yet.</p></div>
 </div>
 
+### Relations used
+
+Mean strength and elastic constants (Poisson's ratio taken as 0.2):
+
+$$f_{cm} = f_{ck} + 8, \qquad E = 21500\,(f_{cm}/10)^{1/3}, \qquad G = \frac{E}{2(1+\nu)}, \quad K = \frac{E}{3(1-2\nu)}$$
+
+Fracture energy in tension, after CEB-FIP Model Code 1990, with $$G_{FC} = 100\,G_F$$ and $$G_{FS} = G_{FT} = G_F$$:
+
+$$G_{F0} = 0.021 + 5.357\times10^{-4}\,d_{max}, \qquad G_F = G_{F0}\,(f_{cm}/10)^{0.7}$$
+
+The yield surface, cap and rate parameters (α, θ, λ, β, R, X<sub>D</sub>, η<sub>0c</sub>, η<sub>0t</sub>, ...) are computed from curve fits in terms of f<sub>ck</sub>, the same ones used in my Python script. Other values are left at their defaults: ERODE = 1.05, B = 100, D = 0.1, PWRC = 5, PWRT = 1.
+
+The material ID is random (100–999); change it to fit your model. The fits were calibrated for normal-strength concrete, so check results against test data before using them for high-strength mixes.
+
 <script>
-    // ====== Simple helpers ======
     let currentContent = '';
     let currentFilename = '';
     const MAX_HISTORY = 10;
@@ -358,7 +161,7 @@ date: 2024-12-12
         return num.toFixed(decimals).padStart(10);
     }
 
-    // ====== Validation ======
+    // ---- validation ----
     function validateInputs() {
         const fcEl = document.getElementById('fc');
         const dmaxEl = document.getElementById('dmax');
@@ -409,20 +212,17 @@ date: 2024-12-12
         return isValid;
     }
 
-    // ====== Presets ======
+    // ---- presets ----
     function loadPreset(fc, dmax, btn) {
         document.getElementById('fc').value = fc;
         document.getElementById('dmax').value = dmax;
         validateInputs();
 
         document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-        if (btn) {
-            btn.classList.add('active');
-            setTimeout(() => btn.classList.remove('active'), 800);
-        }
+        if (btn) btn.classList.add('active');
     }
 
-    // ====== Calculation functions (mirror Python) ======
+    // ---- material parameters (same as the Python script) ----
     function calculateFractureEnergy(fc, dmax) {
         const deltaF = 8;
         const fcm = fc + deltaF;
@@ -438,7 +238,7 @@ date: 2024-12-12
         const fcm = fc + deltaF;
         const fcm0 = 10;
         const nu = 0.2;
-        const E = Ec0 * Math.pow(fcm / fcm0, 1/3); // fcm = fck + 8
+        const E = Ec0 * Math.pow(fcm / fcm0, 1/3);
         const G = E / (2 * (1 + nu));
         const K = E / (3 * (1 - 2 * nu));
         return { G, K };
@@ -482,14 +282,13 @@ date: 2024-12-12
         return { R, XD };
     }
 
-    // ====== History with localStorage ======
+    // ---- history (kept in the browser) ----
     function getHistory() {
         try {
             const raw = localStorage.getItem(HISTORY_KEY);
             if (!raw) return [];
             return JSON.parse(raw) || [];
         } catch (e) {
-            console.log('History parse error:', e);
             return [];
         }
     }
@@ -497,19 +296,12 @@ date: 2024-12-12
     function setHistory(history) {
         try {
             localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
-        } catch (e) {
-            console.log('History save error:', e);
-        }
+        } catch (e) {}
     }
 
     function saveToHistory(fc, dmax, filename) {
         const history = getHistory();
-        history.unshift({
-            fc,
-            dmax,
-            filename,
-            timestamp: new Date().toISOString()
-        });
+        history.unshift({ fc, dmax, filename, timestamp: new Date().toISOString() });
         if (history.length > MAX_HISTORY) {
             history.length = MAX_HISTORY;
         }
@@ -523,63 +315,52 @@ date: 2024-12-12
         const clearBtn = document.getElementById('clear-btn');
 
         if (!history.length) {
-            list.innerHTML = '<p style="color: #93c5fd; font-size: 0.875rem; text-align: center; padding: 2rem 0;">No history yet. Generate your first file!</p>';
+            list.innerHTML = '<p class="hint">Nothing yet.</p>';
             clearBtn.style.display = 'none';
             return;
         }
 
-        clearBtn.style.display = 'block';
-        list.innerHTML = history.map((entry, index) => {
+        clearBtn.style.display = 'inline';
+        list.innerHTML = '<ol style="margin: 0; padding: 0;">' + history.map((entry, index) => {
             const date = new Date(entry.timestamp);
-            const timeStr = date.toLocaleString('en-US', {
-                month: 'short',
+            const timeStr = date.toLocaleString('en-GB', {
                 day: 'numeric',
+                month: 'short',
                 hour: '2-digit',
                 minute: '2-digit'
             });
-            return `
-                <div class="history-item" data-index="${index}">
-                    <div class="history-time">${timeStr}</div>
-                    <div class="history-params">fck=${entry.fc} MPa, dmax=${entry.dmax} mm</div>
-                </div>
-            `;
-        }).join('');
+            return `<li class="history-item" data-index="${index}">f<sub>ck</sub> = ${entry.fc} MPa, d<sub>max</sub> = ${entry.dmax} mm<span class="history-time">${timeStr}</span></li>`;
+        }).join('') + '</ol>';
     }
 
     function loadFromHistory(index) {
-        const history = getHistory();
-        const entry = history[index];
+        const entry = getHistory()[index];
         if (!entry) return;
         document.getElementById('fc').value = entry.fc;
         document.getElementById('dmax').value = entry.dmax;
         validateInputs();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.getElementById('fc').scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
     function clearHistory() {
-        if (!confirm('Are you sure you want to clear all history?')) return;
-        localStorage.removeItem(HISTORY_KEY);
+        if (!confirm('Clear the list of generated files?')) return;
+        try { localStorage.removeItem(HISTORY_KEY); } catch (e) {}
         renderHistory();
     }
 
-    // ====== Generate K file ======
+    // ---- keyword file ----
     function generateKFile() {
         try {
-            if (!validateInputs()) {
-                alert('Please fix input errors before generating.');
-                return;
-            }
+            if (!validateInputs()) return;
 
             const fcVal = parseFloat(document.getElementById('fc').value); // fck
             const dmaxVal = parseFloat(document.getElementById('dmax').value);
 
-            const { GF0, GF } = calculateFractureEnergy(fcVal, dmaxVal);
+            const { GF } = calculateFractureEnergy(fcVal, dmaxVal);
             const { G, K } = calculateModulus(fcVal);
-            const params = calculateAlphaBeta(fcVal);
-            const { alpha, theta, lamda, beta, alpha1, theta1, lamda1, beta1, alpha2, theta2, lamda2, beta2 } = params;
+            const { alpha, theta, lamda, beta, alpha1, theta1, lamda1, beta1, alpha2, theta2, lamda2, beta2 } = calculateAlphaBeta(fcVal);
             const { R, XD } = calculateRXD(fcVal);
-            const add = calculateAdditionalParameters(fcVal);
-            const { eta0c, nc, eta0t, nt, overc, overt, srate, repow } = add;
+            const { eta0c, nc, eta0t, nt, overc, overt, srate, repow } = calculateAdditionalParameters(fcVal);
 
             const GFC = 100 * GF;
             const GFT = GF;
@@ -678,7 +459,6 @@ date: 2024-12-12
             currentContent = lines.join("\n");
             currentFilename = filename;
 
-            // Update UI
             document.getElementById('results').style.display = 'block';
             document.getElementById('filename').textContent = filename;
             document.getElementById('preview').textContent = currentContent;
@@ -690,16 +470,12 @@ date: 2024-12-12
             saveToHistory(fcVal, dmaxVal, filename);
         } catch (err) {
             console.error(err);
-            alert('Error while generating file: ' + err.message);
+            alert('Could not generate the file: ' + err.message);
         }
     }
 
-    // ====== Download ======
     function downloadFile() {
-        if (!currentContent || !currentFilename) {
-            alert('No file generated yet. Please click "Generate Material File" first.');
-            return;
-        }
+        if (!currentContent || !currentFilename) return;
         const blob = new Blob([currentContent], { type: 'text/plain;charset=utf-8' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -711,43 +487,28 @@ date: 2024-12-12
         URL.revokeObjectURL(url);
     }
 
-    // ====== Init on load: gắn event listeners ======
     window.addEventListener('load', function () {
         validateInputs();
         renderHistory();
 
-        const genBtn = document.getElementById('generate-btn');
-        const dlBtn = document.getElementById('download-btn');
-        const clearBtn = document.getElementById('clear-btn');
+        document.getElementById('generate-btn').addEventListener('click', generateKFile);
+        document.getElementById('download-btn').addEventListener('click', downloadFile);
+        document.getElementById('clear-btn').addEventListener('click', clearHistory);
 
-        if (genBtn) genBtn.addEventListener('click', generateKFile);
-        if (dlBtn) dlBtn.addEventListener('click', downloadFile);
-        if (clearBtn) clearBtn.addEventListener('click', clearHistory);
-
-        // Preset buttons
         document.querySelectorAll('.preset-btn').forEach(btn => {
             btn.addEventListener('click', function () {
-                const fc = parseFloat(this.dataset.fc);
-                const dmax = parseFloat(this.dataset.dmax);
-                loadPreset(fc, dmax, this);
+                loadPreset(parseFloat(this.dataset.fc), parseFloat(this.dataset.dmax), this);
             });
         });
 
-        // Input listeners for live validation
-        const fcEl = document.getElementById('fc');
-        const dmaxEl = document.getElementById('dmax');
-        if (fcEl) fcEl.addEventListener('input', validateInputs);
-        if (dmaxEl) dmaxEl.addEventListener('input', validateInputs);
+        document.getElementById('fc').addEventListener('input', validateInputs);
+        document.getElementById('dmax').addEventListener('input', validateInputs);
 
-        // History click via delegation
-        const historyList = document.getElementById('history-list');
-        if (historyList) {
-            historyList.addEventListener('click', function (e) {
-                const item = e.target.closest('.history-item');
-                if (!item) return;
-                const idx = parseInt(item.dataset.index, 10);
-                if (!isNaN(idx)) loadFromHistory(idx);
-            });
-        }
+        document.getElementById('history-list').addEventListener('click', function (e) {
+            const item = e.target.closest('.history-item');
+            if (!item) return;
+            const idx = parseInt(item.dataset.index, 10);
+            if (!isNaN(idx)) loadFromHistory(idx);
+        });
     });
 </script>
