@@ -1,10 +1,8 @@
 ---
-layout: archive
 title: "Tools"
 permalink: /tools/
-author_profile: true
+redirect_from:
+  - /tools/cscm-generator/
+  - /tools/cscm/
+redirect_to: https://lsdynamat.github.io
 ---
-
-{% for post in site.tools %}
-  {% include archive-single.html %}
-{% endfor %}

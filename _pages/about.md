@@ -7,10 +7,12 @@ redirect_from:
   - /about.html
 ---
 
-I am a postdoctoral researcher in the [LGCGM](https://www.insa-rennes.fr/en/lgcgm.html) Structural Engineering Research Group, Department of Civil Engineering and Urban Planning, [INSA Rennes](https://www.insa-rennes.fr/index.html), France. I received my PhD in Architectural Engineering from Sejong University, Seoul, in 2023. My work combines laboratory testing and finite element analysis: connections for steel, concrete and timber structures, seismic protection of non-structural components, and building acoustics.
+I am a postdoctoral researcher in the [LGCGM](https://www.insa-rennes.fr/en/lgcgm.html) Structural Engineering Research Group, Department of Civil Engineering and Urban Planning, [INSA Rennes](https://www.insa-rennes.fr/index.html), France. I received my PhD in Architectural Engineering from Sejong University, Seoul, in 2023. My work combines laboratory testing and finite element analysis: connections for steel, concrete and timber structures, seismic protection of non-structural components, and building acoustics. LS-DYNA material cards and generators I use (CSCM and others) are collected on [LS-DYNA Material Hub](https://lsdynamat.github.io).
 
 ### News
-- **Dec 2025**: Put online a small [CSCM material generator](/tools/cscm-generator/) for LS-DYNA concrete models.
+- **2026**: S-CN connector compression tests and analysis published in *Alexandria Engineering Journal*.
+- **2026**: Adjustable steel façade connector for hybrid timber-concrete structures published in *Structures* (with A. Le Berder).
+- **2025**: Connector for timber frame façades on concrete slabs published in *Journal of Building Engineering*.
 - **Jun 2025**: Paper on a new fastening system for wood-frame façades at the fib Symposium 2025, Antibes.
 - **Mar 2025**: Acoustic performance of composite core thermal breaks published in *Case Studies in Construction Materials*.
 - **Feb 2025**: Started a [blog series](/year-archive/) on modelling concrete with SOLID65 in ANSYS.
@@ -21,10 +23,11 @@ I am a postdoctoral researcher in the [LGCGM](https://www.insa-rennes.fr/en/lgcg
 ### Selected publications
 Full list on the [publications page](/publications/) and [Google Scholar](https://scholar.google.com/citations?user=FSIZYHkAAAAJ&hl=vi).
 
-- **T.V. Han**, G. Lee, Y.S. Shin, S. Woo, K. Lee. Experimental and numerical study of the acoustic performance of a novel composite core thermal break. *Case Studies in Construction Materials*, e04543, 2025. [[PDF]](/files/Experimental-and-numerical-study-of-the-acoustic%20performance.pdf)
-- **T.V. Han**, G. Lee, S.W. Han, T.S. An, C.Y. Jeong, K. Lee. Vibro-acoustic testing on impact sound performance of novel floating floor systems with polyurethane cushions. *Journal of Building Engineering*, 111720, 2025. [[PDF]](/files/Vibro-acoustic-testing-on-impact-sound.pdf)
+- **T.V. Han**, J. MoonSook, Y.N. Kim, T.N. Sanh, N.H. Cuong, K. Lee. Experimental and analytical studies on the compressive behaviors of a 3D-printed sand mold-cast S-CN connector in modular steel buildings. *Alexandria Engineering Journal*, 134, 473–493, 2026.
+- **T.V. Han**, A. Le Berder, T.A. Nguyen, C. Lepourry-Nicollet, H. Somja. Performance assessment of a novel connector for timber frame facades on concrete slabs. *Journal of Building Engineering*, 114397, 2025.
+- **T.V. Han**, G. Lee, Y.S. Shin, S. Woo, K. Lee. Experimental and numerical study of the acoustic performance of a novel composite core thermal break. *Case Studies in Construction Materials*, 22, e04543, 2025. [[PDF]](/files/Experimental-and-numerical-study-of-the-acoustic%20performance.pdf)
+- **T.V. Han**, G. Lee, S.W. Han, T.S. An, C.Y. Jeong, K. Lee. Vibro-acoustic testing on impact sound performance of novel floating floor systems with polyurethane cushions. *Journal of Building Engineering*, 100, 111720, 2025. [[PDF]](/files/Vibro-acoustic-testing-on-impact-sound.pdf)
 - **T.V. Han**, M. Jeong, Y. Kim, D. Lee, N.H. Cuong, K. Lee. Experimental and numerical evaluation of the structural performance of novel S-CN connections in modular construction. *Structures*, 71, 107930, 2025. [[PDF]](/files/Experimental-and-numerical-evaluation-of-the-structural-performance.pdf)
-- **T.V. Han**, S.C. Kim, J. Shin, N.H. Cuong, K. Lee. Biaxial shaking table testing of large-scale novel wireway vibration attenuation systems. *Journal of Building Engineering*, 110792, 2024. [[PDF]](/files/Biaxial-shaking-table-testing.pdf)
 - **T.V. Han**, S.C. Kim, J. Shin, K. Lee. Experimental study of a novel lighting support system reinforced with a pulley friction damper. *Journal of Building Engineering*, 52, 104385, 2022. [[PDF]](/files/Experimental%20study%20of%20a%20novel%20lighting%20support%20system%20reinforced%20with%20a%20pulley%20friction%20damper.pdf)
 
 ### Education
