@@ -11,7 +11,6 @@ Personal academic website of Tran-Van Han, built with the [al-folio](https://git
 | News | `_news/*.md` |
 | CV | `_data/cv.yml` |
 | Teaching | `_pages/teaching.md` |
-| Notes (blog) | `_posts/` |
 | Social links | `_data/socials.yml` |
 
 ## Deployment

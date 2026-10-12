@@ -2,8 +2,8 @@
 layout: page
 title: moved
 permalink: "/year-archive/"
-redirect: /blog/
+redirect: /
 sitemap: false
 ---
 
-This page has moved to [/blog/](/blog/).
+This page has moved to [/](/).
