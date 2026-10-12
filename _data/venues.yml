@@ -1,0 +1,33 @@
+"JBE":
+  url: https://www.sciencedirect.com/journal/journal-of-building-engineering
+  color: "#1f4e79"
+
+"JCSR":
+  url: https://www.sciencedirect.com/journal/journal-of-constructional-steel-research
+  color: "#1f4e79"
+
+"Structures":
+  url: https://www.sciencedirect.com/journal/structures
+  color: "#1f4e79"
+
+"CBM":
+  url: https://www.sciencedirect.com/journal/construction-and-building-materials
+  color: "#1f4e79"
+
+"CSCM":
+  url: https://www.sciencedirect.com/journal/case-studies-in-construction-materials
+  color: "#1f4e79"
+
+"AEJ":
+  url: https://www.sciencedirect.com/journal/alexandria-engineering-journal
+  color: "#1f4e79"
+
+"RINENG":
+  url: https://www.sciencedirect.com/journal/results-in-engineering
+  color: "#1f4e79"
+
+"ICSV":
+  color: "#5b6770"
+
+"fib":
+  color: "#5b6770"

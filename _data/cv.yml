@@ -1,0 +1,162 @@
+cv:
+  name: Tran-Van Han
+  label: Postdoctoral Researcher in Structural Engineering
+  email: tranhan1405@gmail.com
+  location: Rennes, France
+  image: ''
+  summary: Experimental and numerical work on structural connections, seismic performance of non-structural components and building acoustics.
+  sections:
+    Education:
+    - institution: Sejong University
+      location: Seoul, South Korea
+      url: https://en.sejong.ac.kr/eng/index.do
+      area: Architectural Engineering
+      studyType: PhD
+      start_date: 2019
+      end_date: 2023
+      highlights:
+      - 'Advisor: Prof. Kihak Lee'
+      - Sejong University PhD research fellowship (2019–2023)
+    - institution: Hanoi Architectural University
+      location: Hanoi, Vietnam
+      url: https://hau.edu.vn/?lang=en
+      area: Civil Engineering
+      studyType: Bachelor of Engineering
+      start_date: 2010
+      end_date: 2015
+    Experience:
+    - company: LGCGM, INSA Rennes
+      position: Postdoctoral Researcher
+      location: Rennes, France
+      url: https://www.insa-rennes.fr/en/lgcgm.html
+      start_date: 2024
+      highlights:
+      - FACILA, a steel connection system for timber cladding on reinforced concrete slabs.
+    - company: Department of Architectural Engineering, Sejong University
+      position: Postdoctoral Researcher
+      location: Seoul, South Korea
+      start_date: 2023
+      end_date: 2024
+      highlights:
+      - SG thermal break with Ultra-High-Performance Concrete (UHPC) cores, with SG company.
+      - Floating floor with rubber cushions against heavy-weight impact sound, with Korea Disaster Prevention Technology Co., Ltd.
+    - company: Department of Architectural Engineering, Sejong University
+      position: PhD Researcher
+      location: Seoul, South Korea
+      start_date: 2019
+      end_date: 2023
+      highlights:
+      - Modular steel connector (S-CN) for high-rise modular steel buildings, with Samsung C&T (2022–).
+      - Vibration attenuation system with a pulley friction damper for raceway lighting, with Sehong Inc. (2020–2022).
+    - company: Mientrung University of Civil Engineering
+      position: Instructor, Reinforced Concrete Structures
+      location: Phu Yen, Vietnam
+      start_date: 2017
+      end_date: 2019
+    Awards:
+    - title: Basic Science Research Program, National Research Foundation of Korea (NRF)
+      date: 2019
+      awarder: Ministry of Education, Korea
+      summary: Research support during PhD studies (2019–2023).
+    - title: First prize, Vietnam National Student Olympiad in Mechanics
+      date: 2014
+    - title: Third prize, university-level student scientific research contest
+      date: 2014
+      awarder: Hanoi Architectural University
+    - title: Excellent student fellowship
+      date: 2010
+      awarder: Hanoi Architectural University
+      summary: 2010–2015.
+    Publications:
+    - title: Experimental and numerical study on an adjustable steel façade connector for hybrid timber-concrete structures
+      publisher: Structures, 88, 111986
+      releaseDate: '2026-06-01'
+      url: https://doi.org/10.1016/j.istruc.2026.111986
+      summary: Alice Le Berder, **Tran-Van Han**, Tuan-Anh Nguyen, Clemence Lepourry-Nicollet, Hugues Somja
+    - title: Experimental and analytical studies on the compressive behaviors of a 3D-printed sand mold-cast S-CN connector in modular steel buildings
+      publisher: Alexandria Engineering Journal, 134, 473-493
+      releaseDate: '2026-01-01'
+      url: https://doi.org/10.1016/j.aej.2025.12.013
+      summary: '**Tran-Van Han**, Jeong MoonSook, YongNam Kim, Tra Ngoc Sanh, Nguyen Huu Cuong, Kihak Lee'
+    - title: Performance assessment of a novel connector for timber frame facades on concrete slabs
+      publisher: Journal of Building Engineering, 114, 114397
+      releaseDate: '2025-11-01'
+      url: https://doi.org/10.1016/j.jobe.2025.114397
+      summary: '**Tran-Van Han**, Alice Le Berder, Tuan-Anh Nguyen, Clemence Lepourry-Nicollet, Hugues Somja'
+    - title: Experimental and numerical study of the acoustic performance of a novel composite core thermal break
+      publisher: Case Studies in Construction Materials, 22, e04543
+      releaseDate: '2025-07-01'
+      url: https://doi.org/10.1016/j.cscm.2025.e04543
+      summary: '**Tran-Van Han**, Gayoon Lee, Yun-Seong Shin, Sungwoo Woo, Kihak Lee'
+    - title: Vibro-acoustic testing on impact sound performance of novel floating floor systems with polyurethane cushions
+      publisher: Journal of Building Engineering, 100, 111720
+      releaseDate: '2025-04-01'
+      url: https://doi.org/10.1016/j.jobe.2024.111720
+      summary: '**Tran-Van Han**, Gayoon Lee, Sang Whan Han, Tae-Sang An, Chan-Yu Jeong, Kihak Lee'
+    - title: Experimental and numerical evaluation of the structural performance of novel S-CN connections in modular construction
+      publisher: Structures, 71, 107930
+      releaseDate: '2025-01-01'
+      url: https://doi.org/10.1016/j.istruc.2024.107930
+      summary: '**Tran-Van Han**, MoonSook Jeong, YongNam Kim, Dongkyu Lee, Nguyen Huu Cuong, Kihak Lee'
+    - title: Biaxial shaking table testing of large-scale novel wireway vibration attenuation systems
+      publisher: Journal of Building Engineering, 97, 110792
+      releaseDate: '2024-11-01'
+      url: https://doi.org/10.1016/j.jobe.2024.110792
+      summary: '**Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee'
+    - title: Structural test and FEM analysis of a thermal bridge connection employing the UHPC system for concrete cladding wall
+      publisher: Results in Engineering, 22, 102191
+      releaseDate: '2024-06-01'
+      url: https://doi.org/10.1016/j.rineng.2024.102191
+      summary: Nguyen Huu Cuong, Hyoseo An, **Tran-Van Han**, Sanghee An, Jiuk Shin, Kihak Lee
+    - title: Structural test and analyses of UHPC horizontal connection with shear keys for slab-external PC wall
+      publisher: Construction and Building Materials, 419, 135410
+      releaseDate: '2024-03-01'
+      url: https://doi.org/10.1016/j.conbuildmat.2024.135410
+      summary: Nguyen Huu Cuong, Hyoseo An, **Han V. Tran**, Sanghee An, Kihak Lee
+    - title: Tri-axial shaking table testing of lighting support systems with pulley friction dampers and integrated dummy masses
+      publisher: Results in Engineering, 21, 101706
+      releaseDate: '2024-03-01'
+      url: https://doi.org/10.1016/j.rineng.2023.101706
+      summary: '**Tran-Van Han**, Sung Chan Kim, Jiuk Shin, Nguyen Huu Cuong, Kihak Lee'
+    - title: Numerical study on compressive behavior of a 3D-printed sand mold-cast S-CN connector
+      publisher: Journal of Constructional Steel Research, 213, 108336
+      releaseDate: '2024-02-01'
+      url: https://doi.org/10.1016/j.jcsr.2023.108336
+      summary: '**Tran-Van Han**, Jeong MoonSook, YongNam Kim, Dongkyu Lee, Nguyen-Vu Luat, Kihak Lee'
+    - title: Shaking table testing of an innovative wireway vibration attenuation system
+      publisher: Journal of Constructional Steel Research, 197, 107477
+      releaseDate: '2022-10-01'
+      url: https://doi.org/10.1016/j.jcsr.2022.107477
+      summary: '**Han V. Tran**, Sung Chan Kim, Jiuk Shin, Kihak Lee'
+    - title: Experimental study of a novel lighting support system reinforced with a pulley friction damper
+      publisher: Journal of Building Engineering, 52, 104385
+      releaseDate: '2022-07-01'
+      url: https://doi.org/10.1016/j.jobe.2022.104385
+      summary: '**Han V. Tran**, Sung Chan Kim, Jiuk Shin, Kihak Lee'
+    Skills:
+    - name: FEA software
+      keywords:
+      - ANSYS
+      - LS-DYNA
+      - Simcenter 3D
+      - OpenSees
+      - Zeus NL
+    - name: Programming
+      keywords:
+      - Python
+      - MATLAB
+      - PyANSYS
+    Teaching:
+    - label: Sejong University (teaching assistant)
+      details: Advanced Concrete Engineering (Spring 2022, Spring 2024); Earthquake Engineering (Spring 2023)
+    - label: Mientrung University of Civil Engineering (instructor)
+      details: Reinforced Concrete Structures (2017–2019)
+    Service:
+    - bullet: Member of the Korean Concrete Society (2019–present)
+    References:
+    - name: Prof. Hugues Somja
+      reference: Director of the LGCGM laboratory, INSA Rennes, France. [Hugues.Somja@insa-rennes.fr](mailto:Hugues.Somja@insa-rennes.fr)
+    - name: Prof. Kihak Lee
+      reference: Department of Architectural Engineering, Sejong University, Seoul, Korea. [kihaklee@sejong.ac.kr](mailto:kihaklee@sejong.ac.kr)
+    - name: Prof. Sang Whan Han
+      reference: Department of Architectural Engineering, Hanyang University, Seoul, Korea. [swhan@hanyang.ac.kr](mailto:swhan@hanyang.ac.kr)

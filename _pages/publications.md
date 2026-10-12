@@ -1,16 +1,22 @@
 ---
-layout: archive
-title: "Publications"
+layout: page
 permalink: /publications/
-author_profile: true
+title: publications
+description: Journal articles and conference papers in reverse chronological order. See also <a href="https://scholar.google.com/citations?user=FSIZYHkAAAAJ">Google Scholar</a>.
+nav: true
+nav_order: 1
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<!-- _pages/publications.md -->
 
-{% include base_path %}
+{% include bib_search.liquid %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="publications">
+
+<h2 class="bibliography">Journal articles</h2>
+{% bibliography --query @article %}
+
+<h2 class="bibliography">Conference papers</h2>
+{% bibliography --query @inproceedings %}
+
+</div>

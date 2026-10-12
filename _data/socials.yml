@@ -1,0 +1,11 @@
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+email: tranhan1405@gmail.com # your email address
+scholar_userid: FSIZYHkAAAAJ # your Google Scholar ID
+orcid_id: 0000-0001-7782-0785 # your ORCID ID
+scopus_id: 59274399900 # your Scopus author ID
+research_gate_profile: Tran-Van-Han # your profile on ResearchGate
+linkedin_username: tranhan1405 # your LinkedIn user name
+github_username: tranhan1405 # your GitHub user name
+rss_icon: true # comment this line to hide the RSS icon
