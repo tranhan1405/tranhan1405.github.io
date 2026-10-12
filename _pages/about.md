@@ -9,16 +9,14 @@ profile:
   image: prof_pic.png
   image_circular: false
   more_info: >
-    <p>LGCGM, Department of Civil Engineering and Urban Planning</p>
-    <p>INSA Rennes</p>
-    <p>Rennes, France</p>
+    <p>LGCGM, Department of Civil Engineering and Urban Planning<br>INSA Rennes<br>Rennes, France</p>
 
 selected_papers: true
 social: true
 
 announcements:
   enabled: true
-  scrollable: true
+  scrollable: false
   limit: 6
 
 latest_posts:
