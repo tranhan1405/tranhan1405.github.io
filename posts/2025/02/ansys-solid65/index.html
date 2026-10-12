@@ -1,0 +1,426 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Concrete Material Modeling and ANSYS Implementation Using SOLID65 Elements | Tran-Van Han </title> <meta name="author" content="Tran-Van Han"> <meta name="description" content="Tran-Van Han, postdoctoral researcher in structural engineering at INSA Rennes. "> <meta name="keywords" content="structural engineering, finite element analysis, building acoustics, shaking table, modular construction, LS-DYNA"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.ico?v=b5eaaf6e229e769637967ed2ffff931d"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://tranhan1405.github.io/posts/2025/02/ansys-solid65/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Tran-Van</span> Han </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">notes </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">tools </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="https://lsdynamat.github.io" rel="external nofollow noopener" target="_blank">LS-DYNA Material Hub</a> </div> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Concrete Material Modeling and ANSYS Implementation Using SOLID65 Elements</h1> <p class="post-meta"> Created on February 27, 2025 </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2025   ·   <i class="fa-solid fa-hashtag fa-sm"></i> ANSYS   <i class="fa-solid fa-hashtag fa-sm"></i> Concrete   <i class="fa-solid fa-hashtag fa-sm"></i> SOLID65   <i class="fa-solid fa-hashtag fa-sm"></i> Material Modeling   <i class="fa-solid fa-hashtag fa-sm"></i> Finite Element Analysis </p> </header> <article class="post-content"> <div id="markdown-content"> <h3 id="defining-material-properties-for-concrete-model-using-solid-65-elements-in-ansys">Defining Material Properties for Concrete model using SOLID 65 elements in ANSYS</h3> <h2 id="1-overview-of-concrete-material-properties">1. Overview of Concrete Material Properties</h2> <p>Concrete is a composite material with <strong>nonlinear</strong> behavior under compressive and tensile loads. When modeling concrete in <strong>ANSYS</strong> (especially using the <strong>SOLID65</strong> element), key material properties must be defined, including:</p> <ul> <li><strong>Density (ρ)</strong></li> <li><strong>Elastic modulus (Ec)</strong></li> <li><strong>Poisson’s ratio (ν)</strong></li> <li><strong>Tensile strength (ft)</strong></li> <li> <strong>Yield surface models</strong> (Drucker-Prager or Multilinear Isotropic Hardening - MISO)</li> <li><strong>Shear transfer coefficients</strong></li> <li><strong>Stress-strain curves</strong></li> </ul> <hr> <h2 id="2-key-material-parameters-for-concrete-in-ansys-using-solid65-elements">2. Key Material Parameters for Concrete in ANSYS using SOLID65 Elements</h2> <p>SOLID65 is a <strong>3D solid element</strong> that simulates <strong>concrete cracking, crushing, and nonlinear behavior</strong>. The primary input parameters required for this element include:</p> <table> <thead> <tr> <th><strong>Parameter</strong></th> <th><strong>Description</strong></th> </tr> </thead> <tbody> <tr> <td><strong>Density (ρ)</strong></td> <td>Defines the mass density (kg/m³)</td> </tr> <tr> <td><strong>Elastic Modulus (Ec)</strong></td> <td>Defines stiffness (MPa)</td> </tr> <tr> <td><strong>Poisson’s Ratio (ν)</strong></td> <td>Defines lateral strain effects</td> </tr> <tr> <td><strong>Tensile Strength (ft)</strong></td> <td>Defines cracking initiation</td> </tr> <tr> <td><strong>Shear Transfer Coefficients</strong></td> <td>Controls shear across cracks</td> </tr> <tr> <td><strong>Yield Surface Model</strong></td> <td>Drucker-Prager (DP) or Multilinear Isotropic Hardening (MISO)</td> </tr> <tr> <td><strong>Stress-Strain Behavior</strong></td> <td>Defines the parabolic compressive response for MISO</td> </tr> </tbody> </table> <hr> <h2 id="3-density-of-concrete">3. Density of Concrete</h2> <p>Concrete’s density depends on type and composition:</p> <ul> <li> <strong>Normal-weight concrete</strong>: 2300 - 2500 kg/m³</li> <li> <strong>Lightweight concrete</strong>: 1400 - 1800 kg/m³</li> <li> <strong>Heavyweight concrete</strong>: 3000 - 5000 kg/m³</li> </ul> <p><strong>🔹 ANSYS Implementation:</strong></p> <pre><code class="language-apdl">MP,DENS,1,0.0024 ! Normal-weight concrete
+</code></pre> <hr> <h2 id="4-elastic-modulus-and-poissons-ratio">4. Elastic Modulus and Poisson’s Ratio</h2> <h3 id="a-eurocode-equation">(a) Eurocode Equation</h3> <p>Elastic modulus (<strong>Ec</strong>) for concrete is estimated using <strong>Eurocode 2</strong>:</p> \[E_c = 22 \times (f_c + 8)^{0.3} \quad \text{(MPa)}\] <p>✅ <strong>Example for</strong> \( f_c = 40 \) <strong>MPa</strong>:</p> \[E_c = 22 \times (40 + 8)^{0.3} = 34,145 \text{ MPa}\] <h3 id="b-aci-equation">(b) ACI Equation</h3> <p>According to <strong>ACI 318</strong>, the elastic modulus is:</p> \[E_c = 4700 \sqrt{f_c} \quad \text{(MPa)}\] <p>✅ <strong>Example for</strong> \( f_c = 40 \) <strong>MPa</strong>:</p> \[E_c = 4700 \times \sqrt{40} = 29,748 \text{ MPa}\] <p><strong>🔹 ANSYS Implementation:</strong></p> <pre><code class="language-apdl">MP,EX,1,34145   ! Eurocode
+MP,EX,1,29748   ! ACI
+MP,PRXY,1,0.2   ! Poisson's Ratio
+</code></pre> <hr> <h2 id="5-yield-surface-models">5. Yield Surface Models</h2> <p>Concrete is modeled using <strong>two main yield surface models</strong>:</p> <h3 id="a-drucker-prager-dp-model">(a) Drucker-Prager (DP) Model</h3> <p>The <strong>Drucker-Prager</strong> model defines based on:</p> <ul> <li>\(c\) = <strong>cohesion</strong> (MPa)</li> <li>\(\phi\) = <strong>internal friction angle</strong> (°)</li> </ul> <h3 id="interpolation-for-cohesion--friction-angle">Interpolation for Cohesion &amp; Friction Angle</h3> <p>Using data from <strong>Ertekin Öztekin et al [1].</strong>, <strong>cohesion (c)</strong> and <strong>friction angle (φ)</strong> are interpolated:</p> <table> <thead> <tr> <th><strong>fc (MPa)</strong></th> <th><strong>Cohesion (MPa)</strong></th> <th><strong>Internal Friction Angle (°)</strong></th> </tr> </thead> <tbody> <tr> <td>22.2</td> <td>5.25</td> <td>27.5</td> </tr> <tr> <td>30.2</td> <td>8.14</td> <td>29.5</td> </tr> <tr> <td>41.2</td> <td>10.85</td> <td>30.9</td> </tr> <tr> <td>51.9</td> <td>12.40</td> <td>32.8</td> </tr> <tr> <td>70.1</td> <td>16.22</td> <td>36.7</td> </tr> </tbody> </table> <p>✅ <strong>Python Code for Interpolation:</strong></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="n">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+
+<span class="n">fc_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">22.2</span><span class="p">,</span> <span class="mf">30.2</span><span class="p">,</span> <span class="mf">41.2</span><span class="p">,</span> <span class="mf">51.9</span><span class="p">,</span> <span class="mf">70.1</span><span class="p">]</span>
+<span class="n">c_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.25</span><span class="p">,</span> <span class="mf">8.14</span><span class="p">,</span> <span class="mf">10.85</span><span class="p">,</span> <span class="mf">12.40</span><span class="p">,</span> <span class="mf">16.22</span><span class="p">]</span>
+<span class="n">phi_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">27.5</span><span class="p">,</span> <span class="mf">29.5</span><span class="p">,</span> <span class="mf">30.9</span><span class="p">,</span> <span class="mf">32.8</span><span class="p">,</span> <span class="mf">36.7</span><span class="p">]</span>
+
+<span class="n">fc_target</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">c_interp</span> <span class="o">=</span> <span class="nf">interp1d</span><span class="p">(</span><span class="n">fc_values</span><span class="p">,</span> <span class="n">c_values</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="sh">'</span><span class="s">linear</span><span class="sh">'</span><span class="p">)(</span><span class="n">fc_target</span><span class="p">)</span>
+<span class="n">phi_interp</span> <span class="o">=</span> <span class="nf">interp1d</span><span class="p">(</span><span class="n">fc_values</span><span class="p">,</span> <span class="n">phi_values</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="sh">'</span><span class="s">linear</span><span class="sh">'</span><span class="p">)(</span><span class="n">fc_target</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Cohesion: </span><span class="si">{</span><span class="n">c_interp</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> MPa</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Friction Angle: </span><span class="si">{</span><span class="n">phi_interp</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">°</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div> <p><strong>🔹 ANSYS Implementation:</strong></p> <pre><code class="language-apdl">! Define Drucker-Prager Parameters
+TB,DP,SOLID65_MATID
+TBDATA,1,cohesion,friction_angle,0  ! Cohesion &amp; Internal Friction Angle Interpolated
+</code></pre> <hr> <h3 id="b-multilinear-isotropic-hardening-miso-with-parabolic-plastic-curve-stress-strain-relationship">(b) Multilinear Isotropic Hardening (MISO) with Parabolic-Plastic Curve Stress-strain relationship</h3> <p>From <strong>PCA’s Notes on ACI 318</strong>, the <strong>compressive stress-strain relation</strong> is:</p> \[f_c = f_{c,max} \times (2(\epsilon/\epsilon_0) - (\epsilon/\epsilon_0)^2)\] <p><strong>🔹 ANSYS Implementation [2]:</strong></p> <pre><code class="language-apdl">TB,MISO,SOLID65_MATID,1,8,0  
+TBTEMP,22
+! Assign Computed Stress-Strain Data to ANSYS
+TBPT,,0,0
+TBPT,,0.00036,13.1
+TBPT,,0.00060,20.40
+TBPT,,0.00130,35.10
+TBPT,,0.00190,39.90
+TBPT,,0.00200,40.00
+TBPT,,0.00243,40.00
+TBPT,,0.00350,40.00 
+</code></pre> <hr> <h2 id="6-concrete-specific-properties--cracking-and-shear-transfer">6. Concrete-Specific Properties – Cracking and Shear Transfer</h2> <h3 id="shear-transfer-coefficients"><strong>Shear Transfer Coefficients</strong></h3> <ul> <li> <strong>ShrCf-Op (Open Crack)</strong>: 0.5 (normal), 0.25 (high-stress)</li> <li> <strong>ShrCf-Cl (Closed Crack)</strong>: 0.9 - 1.0</li> </ul> <p><strong>🔹 ANSYS Implementation:</strong></p> <pre><code class="language-apdl">TB,CONC,1,1,9
+TBDATA,1,0.5,0.9,ft,-1
+</code></pre> <hr> <h2 id="7-tensile-strength">7. Tensile Strength</h2> <h3 id="a-eurocode-2">(a) Eurocode 2:</h3> <p>For concrete class \(\leq\) C50/60</p> \[f_t = 0.3 \times f_c^{2/3}\] <p>For concrete class \(\geq\) C50/60</p> \[f_{t} = 2.12 \times \ln\left(1 + \frac{f_{cm}}{10} \right) \quad \text{(MPa)}\] <p><strong>🔹 ANSYS Implementation:</strong></p> <pre><code class="language-apdl">! Compute Tensile Strength ft Based on EC2
+*IF,fc,LE,50,THEN
+  ft=0.3*(fc)**(2/3)   
+*ELSE
+  ft=2.12*LOG(1+0.1*fc) 
+*ENDIF
+</code></pre> <p>✅ <strong>For</strong> \(f_c = 40\) <strong>MPa</strong>:</p> \[f_t = 0.3 \times 40^{2/3} = 3.5 \text{ MPa}\] <h3 id="b-aci-318">(b) ACI 318:</h3> \[f_t = 0.623 \sqrt{f_c}\] <p>✅ <strong>For</strong> \(f_c = 40\) <strong>MPa</strong>:</p> \[f_t = 0.623 \times \sqrt{40} = 3.94 \text{ MPa}\] <hr> <h2 id="8-complete-ansys-code">8. Complete ANSYS Code</h2> <p>✅ <strong>MISO implementations</strong></p> <pre><code class="language-apdl">! Complete ANSYS implementation for fc = 40 MPa
+!Author: Dr. Han
+!Automatically determine parameters and define the material model for the SOLID65 concrete element, using the input values of fc and e0.
+/PREP7
+! Define Material ID
+SOLID65_MATID = 1234 !Material ID
+! Define Constants
+f2max=40        ! Maximum compressive stress fc (MPa)
+e0=0.002        ! Peak strain
+
+! Compute Tensile Strength ft Based on EC2
+*IF,f2max,LE,50,THEN
+  ft=0.3*(f2max)**(2/3)   
+*ELSE
+  ft=2.12*LOG(1+0.1*f2max) 
+*ENDIF
+
+! Define Predefined Strain Values (ε2)
+*DIM,eps_array,ARRAY,8
+eps_array(1)=0.00000
+eps_array(2)=0.00036
+eps_array(3)=0.00060
+eps_array(4)=0.00130
+eps_array(5)=0.00190
+eps_array(6)=0.00200
+eps_array(7)=0.00243
+eps_array(8)=0.00350  
+
+! Define Stress Values Manually
+*DIM,f2_array,ARRAY,8
+f2_array(1)=0.0
+f2_array(2)=f2max*(2*(eps_array(2)/e0)-(eps_array(2)/e0)*(eps_array(2)/e0))
+f2_array(3)=f2max*(2*(eps_array(3)/e0)-(eps_array(3)/e0)*(eps_array(3)/e0))
+f2_array(4)=f2max*(2*(eps_array(4)/e0)-(eps_array(4)/e0)*(eps_array(4)/e0))
+f2_array(5)=f2max*(2*(eps_array(5)/e0)-(eps_array(5)/e0)*(eps_array(5)/e0))
+f2_array(6)=f2max  ! Stress remains constant for ε ≥ ε0
+f2_array(7)=f2max  ! Stress remains constant for ε ≥ ε0
+f2_array(8)=f2max  ! Stress remains constant for ε ≥ ε0
+
+EC=f2_array(2)/eps_array(2)
+
+! Define Solid5 element
+ET,SOLID65_MATID,SOLID65
+R,SOLID65_MATID,0,0,0,0,0,0
+RMORE,0,0,0,0,0
+! Define Material Properties
+MP,EX,SOLID65_MATID,EC  ! Young's Modulus
+MP,PRXY,SOLID65_MATID,0.2  ! Poisson's Ratio
+MP,DENS,SOLID65_MATID,0.0024 ! Density of Concrete  2400 (kg/m³)
+
+! Define Concrete Material Model
+TB,CONCR,SOLID65_MATID,1,9
+TBTEMP,22
+TBDATA,1,0.3,0.8,ft,-1  ! Tensile strength automatically calculated
+
+! Define Multilinear Isotropic Hardening for Stress-Strain
+TB,MISO,SOLID65_MATID,1,8,0  
+TBTEMP,22
+
+! Assign Computed Stress-Strain Data to ANSYS
+TBPT,,eps_array(1),f2_array(1)
+TBPT,,eps_array(2),f2_array(2)
+TBPT,,eps_array(3),f2_array(3)
+TBPT,,eps_array(4),f2_array(4)
+TBPT,,eps_array(5),f2_array(5)
+TBPT,,eps_array(6),f2_array(6)
+TBPT,,eps_array(7),f2_array(7)
+TBPT,,eps_array(8),f2_array(8) 
+
+
+
+</code></pre> <p>✅ <strong>Drucker-Prager (DP) implementations</strong></p> <pre><code class="language-apdl">/PREP7
+! Complete ANSYS implementation for fc = 40 MPa
+!Author: Dr. Han
+!Automatically determine parameters and define the material model for the SOLID65 concrete element, using the input values of fc 
+! Define Material ID
+!SOLID65_MATID=1  ! Concrete Material
+
+! Define Constants
+fc=40   ! Given Compressive Strength (MPa)
+
+! Compute Young’s Modulus Ec Based on Eurocode 2
+Ec=22000*(((fc+8)/10)**0.3)  ! Young's Modulus in MPa
+
+! Define Sorted Data Points (fc, c, Ø) for Interpolation
+*DIM,fc_table,ARRAY,16
+fc_table(1)=22.216
+fc_table(2)=24.717
+fc_table(3)=30.240
+fc_table(4)=40.618
+fc_table(5)=41.175
+fc_table(6)=45.232
+fc_table(7)=51.934
+fc_table(8)=53.209
+fc_table(9)=56.498
+fc_table(10)=58.838
+fc_table(11)=61.803
+fc_table(12)=62.235
+fc_table(13)=70.109
+fc_table(14)=71.562
+fc_table(15)=81.164
+fc_table(16)=84.443
+
+*DIM,cohesion_table,ARRAY,16
+cohesion_table(1)=5.245
+cohesion_table(2)=5.907
+cohesion_table(3)=8.142
+cohesion_table(4)=9.013
+cohesion_table(5)=10.849
+cohesion_table(6)=10.638
+cohesion_table(7)=12.403
+cohesion_table(8)=12.814
+cohesion_table(9)=13.807
+cohesion_table(10)=13.839
+cohesion_table(11)=14.319
+cohesion_table(12)=14.530
+cohesion_table(13)=16.228
+cohesion_table(14)=16.735
+cohesion_table(15)=17.875
+cohesion_table(16)=18.892
+
+*DIM,friction_table,ARRAY,16
+friction_table(1)=27.497
+friction_table(2)=28.765
+friction_table(3)=29.479
+friction_table(4)=31.087
+friction_table(5)=30.904
+friction_table(6)=33.071
+friction_table(7)=32.805
+friction_table(8)=33.897
+friction_table(9)=34.184
+friction_table(10)=34.564
+friction_table(11)=35.368
+friction_table(12)=35.572
+friction_table(13)=36.732
+friction_table(14)=36.399
+friction_table(15)=37.133
+friction_table(16)=38.636
+
+! Linear Interpolation Function for Cohesion and Friction Angle
+*DO,i,1,15
+  *IF,fc,GE,fc_table(i),THEN
+    *IF,fc,LE,fc_table(i+1),THEN
+      ratio=(fc - fc_table(i)) / (fc_table(i+1) - fc_table(i))
+      cohesion=cohesion_table(i) + ratio * (cohesion_table(i+1) - cohesion_table(i))
+      friction_angle=friction_table(i) + ratio * (friction_table(i+1) - friction_table(i))
+      *EXIT
+    *ENDIF
+  *ENDIF
+*ENDDO
+
+! Compute Tensile Strength ft Based on EC2
+*IF,fc,LE,50,THEN
+  ft=0.3*(fc)**(2/3)   
+*ELSE
+  ft=2.12*LOG(1+0.1*fc) 
+*ENDIF
+
+! Define Material Properties
+MP,EX,SOLID65_MATID,Ec      ! Young's Modulus from EC2
+MP,PRXY,SOLID65_MATID,0.2   ! Poisson's Ratio
+MP,DENS,SOLID65_MATID,0.0024  ! Density of Concrete 2400 (kg/m³)
+
+! Define Drucker-Prager Parameters
+TB,DP,SOLID65_MATID
+TBDATA,1,cohesion,friction_angle,0  ! Cohesion &amp; Internal Friction Angle Interpolated
+
+! Define Concrete Cracking Properties
+TB,CONC,SOLID65_MATID,1,9
+TBTEMP,0
+
+! Open Crack and Closed Crack Shear Transfer Coefficients
+! - `β_t = 0.3` → Shear transfer coefficient for **open cracks** (low value reduces shear after cracking)
+! - `β_c = 0.8` → Shear transfer coefficient for **closed cracks** (higher value restores shear when cracks close)
+! - `ft` → Tensile strength (computed from EC2)
+! - `-1` → Disables crushing capability (crushing not considered)
+TBDATA,1,0.3,0.8,ft,-1  
+!*
+ET,solid65_matid,SOLID65
+!KEYOPT,solid65_matid,7,1 !Include tensile stress relaxation after cracking to help convergence
+!KEYOPT,solid65_matid,6,3 !Print solution also at each integration point
+</code></pre> <hr> <h2 id="references">References:</h2> <p>[1] Öztekin, E., Pul, S., &amp; Hüsem, M. (2016). Experimental determination of Drucker-Prager yield criterion parameters for normal and high strength concretes under triaxial compression. Construction and Building Materials, 112, 725-732.</p> <p>[2] Thanapon Buamongkol, ANSYS Tutorial: Learn APDL Command for SOLID65 Concrete Modeling Using ANSYS Workbench 2019, https://youtu.be/0JiKNWt095I?si=7lz3-Ja3Qj6o1dT2</p> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Tran-Van Han. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Journal articles and conference papers in reverse chronological order. See also Google Scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Last updated October 2026.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "nav-notes",
+          title: "notes",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "dropdown-ls-dyna-material-hub",
+              title: "LS-DYNA Material Hub",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "https://lsdynamat.github.io";
+              },
+            },{id: "post-concrete-material-modeling-and-ansys-implementation-using-solid65-elements",
+        
+          title: "Concrete Material Modeling and ANSYS Implementation Using SOLID65 Elements",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2025/02/ansys-solid65/";
+          
+        },
+      },{id: "post-how-to-use-the-solid65-element-in-ansys",
+        
+          title: "How to Use the SOLID65 Element in ANSYS",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2025/02/ansys-solid65-1/";
+          
+        },
+      },{id: "post-ansys-workbench-bond-slip-behavior-between-rebar-and-concrete-solid65-including-concrete-cracking",
+        
+          title: "ANSYS Workbench: Bond-Slip Behavior Between Rebar and Concrete (SOLID65) - Including Concrete Cracking...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2025/02/ansys-bond-slip/";
+          
+        },
+      },{id: "post-evaluation-of-acoustic-response-of-impact-sound-levels-of-floor-structures-korean-standard",
+        
+          title: "Evaluation of Acoustic Response of Impact Sound Levels of Floor Structures - Korean...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2024/06/blog-post-8/";
+          
+        },
+      },{id: "news-started-a-short-series-of-notes-blog-on-modelling-reinforced-concrete-with-solid65-in-ansys",
+          title: 'Started a short [series of notes](/blog/) on modelling reinforced concrete with SOLID65 in...',
+          description: "",
+          section: "News",},{id: "news-paper-on-the-anchorage-of-a-new-fastening-system-for-wood-frame-façades-at-the-fib-symposium-2025-antibes",
+          title: 'Paper on the anchorage of a new fastening system for wood-frame façades at...',
+          description: "",
+          section: "News",},{id: "news-acoustic-performance-of-composite-core-thermal-breaks-published-in-case-studies-in-construction-materials-https-doi-org-10-1016-j-cscm-2025-e04543",
+          title: 'Acoustic performance of composite core thermal breaks published in [*Case Studies in Construction...',
+          description: "",
+          section: "News",},{id: "news-performance-assessment-of-a-novel-connector-for-timber-frame-façades-on-concrete-slabs-in-journal-of-building-engineering-https-doi-org-10-1016-j-jobe-2025-114397",
+          title: 'Performance assessment of a novel connector for timber-frame façades on concrete slabs, in...',
+          description: "",
+          section: "News",},{id: "news-compression-tests-and-analytical-model-of-the-3d-printed-sand-mold-cast-s-cn-connector-published-in-alexandria-engineering-journal-https-doi-org-10-1016-j-aej-2025-12-013",
+          title: 'Compression tests and analytical model of the 3D-printed sand mold-cast S-CN connector published...',
+          description: "",
+          section: "News",},{id: "news-our-paper-with-a-le-berder-on-an-adjustable-steel-façade-connector-for-hybrid-timber-concrete-structures-is-out-in-structures-https-doi-org-10-1016-j-istruc-2026-111986",
+          title: 'Our paper with A. Le Berder on an adjustable steel façade connector for...',
+          description: "",
+          section: "News",},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%74%72%61%6E%68%61%6E%31%34%30%35@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=FSIZYHkAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0001-7782-0785", "_blank");
+        },
+      },{
+        id: 'social-scopus',
+        title: 'Scopus',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.scopus.com/authid/detail.uri?authorId=59274399900", "_blank");
+        },
+      },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Tran-Van-Han/", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/tranhan1405", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/tranhan1405", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
