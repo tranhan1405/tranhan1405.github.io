@@ -130,16 +130,6 @@ div#notebook {
   background-color: #ffffff;
 }
 
-#header .header-bar {
-  background: #ffffff;
-  background-color: #ffffff;
-}
-
-body > #header .header-bar {
-  width: 100%;
-  background: #ffffff;
-}
-
 .navbar {
   border: none;
 }
@@ -606,14 +596,6 @@ input.raw_input {
   margin: 0em 0.25em;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-
-
-video {
-  display: inline;
-  vertical-align: middle;
-  align-content: center;
-  margin-left: 20%;
 }
 
 
